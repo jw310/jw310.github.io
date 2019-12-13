@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="Jw的學習大小事">
 <meta property="og:description" content="#CSS 基本介紹 CSS是什麼">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-12-13T06:31:25.000Z">
+<meta property="og:updated_time" content="2019-12-13T06:33:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css_base">
 <meta name="twitter:description" content="#CSS 基本介紹 CSS是什麼">
@@ -423,7 +423,7 @@
                 
               
 
-              <time title="創建時間：2019-12-13 10:14:32 / 修改時間：14:31:25" itemprop="dateCreated datePublished" datetime="2019-12-13T10:14:32+08:00">2019-12-13</time>
+              <time title="創建時間：2019-12-13 10:14:32 / 修改時間：14:33:09" itemprop="dateCreated datePublished" datetime="2019-12-13T10:14:32+08:00">2019-12-13</time>
             </span>
           
 
@@ -464,7 +464,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
               
-              <span title="文章字數">2.6k</span>
+              <span title="文章字數">2.7k</span>
             </span>
           
 
@@ -501,10 +501,12 @@
 <li>不要習慣寫死高度，利用 max-width、margin、padding 來做出空間。</li>
 <li>Bootstrap 格線設計好用。</li>
 </ul>
-<h2 id="加入到-HTML-三種方式"><a href="#加入到-HTML-三種方式" class="headerlink" title="加入到 HTML 三種方式"></a>加入到 HTML 三種方式</h2><p>1.外部載入 CSS 檔案<br>這是一個比較常用的方式，通常會將所有的 CSS 檔案集中寫在一起，然後另存為一個附檔名為 .css 的檔案，然後在 HTML 文件中的<head><meta name="generator" content="Hexo 3.9.0"></head>內添加一個<link>標籤並且在href=””屬性內，指向到該 CSS 檔案的存放位置。  </p>
-<figure class="highlight plain"><figcaption><span>rel</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">2.將 CSS 內容寫在&lt;style&gt;&lt;/style&gt;裡，並放在&lt;head&gt;&lt;/head&gt;標籤裡。</span><br></pre></td></tr></table></figure>
-<p><style><br>   .red{<br>     color: red;<br>   }<br></style><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">3.或是將 CSS 內容單獨的寫在每一個指定的網頁標籤</span><br></pre></td></tr></table></figure></p>
-<p></p><p style="”color:green”"></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 規則包含兩個部分：選取器(選取元素)和宣告</span><br><span class="line">  </span><br><span class="line">選取器      宣告  </span><br><span class="line">```p &#123; color: red ; &#125;```  </span><br><span class="line">      </span><br><span class="line">選取多元素</span><br></pre></td></tr></table></figure><p></p>
+<h2 id="加入到-HTML-三種方式"><a href="#加入到-HTML-三種方式" class="headerlink" title="加入到 HTML 三種方式"></a>加入到 HTML 三種方式</h2><p>1.外部載入 CSS 檔案<br>這是一個比較常用的方式，通常會將所有的 CSS 檔案集中寫在一起，然後另存為一個附檔名為 .css 的檔案，然後在 HTML 文件中的<head><meta name="generator" content="Hexo 3.9.0"></head>內添加一個<link>標籤並且在 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```&lt;link rel=”stylesheet” href=”css/all.css”&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2.將 CSS 內容寫在<style></style>裡，並放在<head><meta name="generator" content="Hexo 3.9.0"></head>標籤裡。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">   .red&#123;</span><br><span class="line">     color: red;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>3.或是將 CSS 內容單獨的寫在每一個指定的網頁標籤</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=”color:green”&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="規則包含兩個部分：選取器-選取元素-和宣告"><a href="#規則包含兩個部分：選取器-選取元素-和宣告" class="headerlink" title="規則包含兩個部分：選取器(選取元素)和宣告"></a>規則包含兩個部分：選取器(選取元素)和宣告</h2><p>選取器      宣告<br><figure class="highlight plain"><figcaption><span>&#123; color: red ; &#125;```  </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      </span><br><span class="line">選取多元素</span><br></pre></td></tr></table></figure></p>
 <pre><code>h1, h2, h3  { color: red ;
               }
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">                       </span><br><span class="line">選取頁面上所有的元素 ```* &#123; &#125; ``` </span><br><span class="line"></span><br><span class="line">選取 id=&quot;introduction&quot; 的元素  ```#introduction &#123;&#125;``` </span><br><span class="line">    </span><br><span class="line">選取屬性 class=&quot;introduction&quot; 的元素 ```.introduction &#123;&#125;</span><br></pre></td></tr></table></figure>
@@ -781,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS是什麼"><span class="nav-number">1.</span> <span class="nav-text">CSS是什麼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入到-HTML-三種方式"><span class="nav-number">2.</span> <span class="nav-text">加入到 HTML 三種方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-white"><span class="nav-number">2.0.1.</span> <span class="nav-text">background-color: white;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#opacity-0-5"><span class="nav-number">2.0.2.</span> <span class="nav-text">opacity: 0,5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-rgba-100-100-90-0-5"><span class="nav-number">2.0.3.</span> <span class="nav-text">background-color: rgba(100,100,90,0.5);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-image-url-位置"><span class="nav-number">2.0.4.</span> <span class="nav-text">background-image: url(位置);</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">3.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#font-family-Arial-Helvetica-Georgia"><span class="nav-number">3.0.1.</span> <span class="nav-text">font-family: Arial, Helvetica, Georgia</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-size-12px"><span class="nav-number">3.0.2.</span> <span class="nav-text">font-size: 12px;</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS是什麼"><span class="nav-number">1.</span> <span class="nav-text">CSS是什麼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入到-HTML-三種方式"><span class="nav-number">2.</span> <span class="nav-text">加入到 HTML 三種方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#規則包含兩個部分：選取器-選取元素-和宣告"><span class="nav-number">3.</span> <span class="nav-text">規則包含兩個部分：選取器(選取元素)和宣告</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-white"><span class="nav-number">3.0.1.</span> <span class="nav-text">background-color: white;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#opacity-0-5"><span class="nav-number">3.0.2.</span> <span class="nav-text">opacity: 0,5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-rgba-100-100-90-0-5"><span class="nav-number">3.0.3.</span> <span class="nav-text">background-color: rgba(100,100,90,0.5);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-image-url-位置"><span class="nav-number">3.0.4.</span> <span class="nav-text">background-image: url(位置);</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">4.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#font-family-Arial-Helvetica-Georgia"><span class="nav-number">4.0.1.</span> <span class="nav-text">font-family: Arial, Helvetica, Georgia</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-size-12px"><span class="nav-number">4.0.2.</span> <span class="nav-text">font-size: 12px;</span></a></li></ol></li></div>
             
 
           </div>
