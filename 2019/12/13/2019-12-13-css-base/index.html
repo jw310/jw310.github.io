@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="#CSS 基本介紹 CSS是什麼">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 基本介紹">
+<meta property="og:url" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/index.html">
+<meta property="og:site_name" content="Jw的學習大小事">
+<meta property="og:description" content="#CSS 基本介紹 CSS是什麼">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/boxmodel.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flexa.png">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex1.png">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flexb.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex2.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex3.png">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex4.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex5.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex6.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/flex7.jpg">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/grid.png">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/grid1.png">
+<meta property="og:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/grid2.png">
+<meta property="og:updated_time" content="2019-12-13T08:03:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 基本介紹">
+<meta name="twitter:description" content="#CSS 基本介紹 CSS是什麼">
+<meta name="twitter:image" content="https://jw310.github.io/2019/12/13/2019-12-13-css-base/boxmodel.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://jw310.github.io/2019/12/13/2019-12-13-css-base/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CSS 基本介紹 | Jw的學習大小事</title>
+  
+
+
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140888842-1 //UAID追蹤碼"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-140888842-1 //UAID追蹤碼');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jw的學習大小事</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>關於</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>標籤</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分類</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜尋</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜尋..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jw310.github.io/2019/12/13/2019-12-13-css-base/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jerry wu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jw的學習大小事">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS 基本介紹
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-12-13 10:14:32 / 修改時間：16:03:39" itemprop="dateCreated datePublished" datetime="2019-12-13T10:14:32+08:00">2019-12-13</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+              <span title="文章字數">8.7k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+              <span title="所需閱讀時間">15 分鐘</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#CSS 基本介紹</p>
+<h2 id="CSS是什麼"><a href="#CSS是什麼" class="headerlink" title="CSS是什麼"></a>CSS是什麼</h2><ul>
+<li>樣式：將規則與 HTML 元素連結，來規定特定元素應呈現的樣子。</li>
+<li>有範圍性，不用下重複設定在多個標籤元素上。直接在最外圍的標籤上設定，例如 body、header。</li>
+<li>盡量不要用 id 來設計樣式。</li>
+<li>不要習慣寫死高度，利用 max-width、margin、padding 來做出空間。</li>
+<li>Bootstrap 格線設計好用。</li>
+</ul>
+<h2 id="加入到-HTML-三種方式"><a href="#加入到-HTML-三種方式" class="headerlink" title="加入到 HTML 三種方式"></a>加入到 HTML 三種方式</h2><p>1.外部載入 CSS 檔案<br>這是一個比較常用的方式，通常會將所有的 CSS 檔案集中寫在一起，然後另存為一個附檔名為 css 的檔案，然後在 HTML 文件中的    head 標籤內添加一個 link 標籤並且在 href 屬性內，指向到該 CSS 檔案的存放位置。  </p>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/all.css&quot;/&gt;</code></p>
+<p>2.將 CSS 內容寫在 style 標籤裡，並放在 head 標籤裡。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">   .red&#123;</span><br><span class="line">     color: red;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>3.或是將 CSS 內容單獨的寫在每一個指定的網頁標籤</p>
+<p><code>&lt;p style=”color:green”&gt;&lt;/p&gt;</code></p>
+<h2 id="規則包含兩個部分：選取器-選取元素-和宣告"><a href="#規則包含兩個部分：選取器-選取元素-和宣告" class="headerlink" title="規則包含兩個部分：選取器(選取元素)和宣告"></a>規則包含兩個部分：選取器(選取元素)和宣告</h2><p><code>p { color: red; }</code><br>選取器      宣告</p>
+<p><code>h1, h2, h3  { 
+   color: red;
+    }</code></p>
+<blockquote>
+<p>選取多元素</p>
+</blockquote>
+<p><code>* { }</code>                        </p>
+<blockquote>
+<p>選取頁面上所有的元素</p>
+</blockquote>
+<p><code>#introduction {}</code></p>
+<blockquote>
+<p>選取 id=”introduction” 的元素</p>
+</blockquote>
+<p><code>.introduction {}</code></p>
+<blockquote>
+<p>選取屬性 class=”introduction” 的元素</p>
+</blockquote>
+<p><code>p.a {}</code></p>
+<blockquote>
+<p>選取 class 屬性值為 a 的 <code>&lt;p&gt;</code> 元素</p>
+</blockquote>
+<p><code>li&gt;a {}</code></p>
+<blockquote>
+<p>選取 <code>&lt;li&gt;</code> 元素內的 <code>&lt;a&gt;</code> 元素，但排除頁面上其他的 <code>&lt;a&gt;</code> 元素  </p>
+</blockquote>
+<p><code>p a {}</code></p>
+<blockquote>
+<p>選取任何在 <code>&lt;p&gt;</code> 元素之內的 <code>&lt;a&gt;</code> 元素，即使兩者之間還有堆疊其他元素 </p>
+</blockquote>
+<h2 id="階層規範-若兩個規則同時套用到同一個元素上"><a href="#階層規範-若兩個規則同時套用到同一個元素上" class="headerlink" title="階層規範(若兩個規則同時套用到同一個元素上)"></a>階層規範(若兩個規則同時套用到同一個元素上)</h2><ul>
+<li>後來先贏：以最後一個的規則為主</li>
+<li>指定程度：若一個選取器較其他的更具指定性，以較具指定性的為主</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 比 * 更具指定性</span><br><span class="line">p b 比 p 更具指定性</span><br><span class="line">p#intro 比 p 更具指定性</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重要：可在任何屬性值後面加上 !important ，來表示此規則比套用到相同元素的其他規定更重要。 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p b &#123;</span><br><span class="line">   color: blue !important;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="繼承"><a href="#繼承" class="headerlink" title="繼承"></a>繼承</h2><p>父元素的某些屬性會套用到大部分的子元素上。或在屬性中使用 inherit 值來強迫許多屬性從父元素來繼承屬性值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">       font-family: Arial ;</span><br><span class="line">       color: #665544;</span><br><span class="line">       padding: 10px;</span><br><span class="line">         &#125;</span><br><span class="line">.page  &#123;</span><br><span class="line">       border: 1px solid #665544;</span><br><span class="line">       background-color: #efefef;</span><br><span class="line">       padding: inherit;</span><br><span class="line">         &#125;</span><br></pre></td></tr></table></figure>
+<p><code>&lt;body&gt;</code> 元素的 font-family 或 color 屬性會繼承給子元素 class=”page” 的 元素，從套用到 <code>&lt;body&gt;</code> 元素的 CSS 規則中繼承了內距尺寸。</p>
+<h1 id="屬性種類"><a href="#屬性種類" class="headerlink" title="屬性種類"></a>屬性種類</h1><h2 id="顏色"><a href="#顏色" class="headerlink" title="顏色"></a>顏色</h2><h4 id="color-DarkCyan"><a href="#color-DarkCyan" class="headerlink" title="color: DarkCyan;"></a>color: DarkCyan;</h4><blockquote>
+<p>前景色</p>
+</blockquote>
+<p>三種表示方式：<br>1.<code>color: DarkCyan; // name</code><br>2.<code>color: #ee3e80;     // hex</code><br>3.<code>color: rgb(100,100,90);  // rgb</code></p>
+<h4 id="background-color-white"><a href="#background-color-white" class="headerlink" title="background-color: white;"></a>background-color: white;</h4><blockquote>
+<p>背景</p>
+</blockquote>
+<h4 id="opacity-0-5"><a href="#opacity-0-5" class="headerlink" title="opacity: 0,5;"></a>opacity: 0,5;</h4><h4 id="background-color-rgba-100-100-90-0-5"><a href="#background-color-rgba-100-100-90-0-5" class="headerlink" title="background-color: rgba(100,100,90,0.5);"></a>background-color: rgba(100,100,90,0.5);</h4><blockquote>
+<p>不透明度(CSS3 值介於 0.0 到 1.0 or rgba 表示)</p>
+</blockquote>
+<h4 id="background-image-url-位置"><a href="#background-image-url-位置" class="headerlink" title="background-image: url(位置);"></a>background-image: url(位置);</h4><blockquote>
+<p>元素背景影像</p>
+</blockquote>
+<h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><h4 id="font-family-Arial-Helvetica-Georgia"><a href="#font-family-Arial-Helvetica-Georgia" class="headerlink" title="font-family: Arial, Helvetica, Georgia"></a>font-family: Arial, Helvetica, Georgia</h4><blockquote>
+<p>指定字型</p>
+</blockquote>
+<h4 id="font-size-12px"><a href="#font-size-12px" class="headerlink" title="font-size: 12px;"></a>font-size: 12px;</h4><blockquote>
+<p>字體大小</p>
+</blockquote>
+<p>表示方式：<br>1.<code>font-size: 12px;</code><br>2.<code>font-size: 200%;  // 瀏覽器預設文字大小是 16px</code><br>3.<code>font-size: 1.3em;  // ㄧ個 em 等於 m 字母的寬度</code></p>
+<h4 id="font-weight-normal-or-bold"><a href="#font-weight-normal-or-bold" class="headerlink" title="font-weight: normal or bold;"></a>font-weight: normal or bold;</h4><blockquote>
+<p>粗體</p>
+</blockquote>
+<h4 id="font-style-normal-or-italic-or-oblique"><a href="#font-style-normal-or-italic-or-oblique" class="headerlink" title="font-style: normal or italic or oblique;"></a>font-style: normal or italic or oblique;</h4><blockquote>
+<p>斜體</p>
+</blockquote>
+<h4 id="text-transform-uppercase-大-or-lowercase-小-or-capitalize-每個字的第一個字變大寫"><a href="#text-transform-uppercase-大-or-lowercase-小-or-capitalize-每個字的第一個字變大寫" class="headerlink" title="text-transform: uppercase(大) or lowercase(小) or capitalize(每個字的第一個字變大寫);"></a>text-transform: uppercase(大) or lowercase(小) or capitalize(每個字的第一個字變大寫);</h4><blockquote>
+<p>大小寫 </p>
+</blockquote>
+<h4 id="text-decoration-none-or-underline-底線-or-overline-文字上方加線-or-line-through-刪節線-or-blink-動態閃爍"><a href="#text-decoration-none-or-underline-底線-or-overline-文字上方加線-or-line-through-刪節線-or-blink-動態閃爍" class="headerlink" title="text-decoration: none or underline(底線) or overline(文字上方加線) or line-through(刪節線) or blink(動態閃爍);"></a>text-decoration: none or underline(底線) or overline(文字上方加線) or line-through(刪節線) or blink(動態閃爍);</h4><blockquote>
+<p>底線和刪節線</p>
+</blockquote>
+<h4 id="line-height-1-5em"><a href="#line-height-1-5em" class="headerlink" title="line-height: 1.5em;"></a>line-height: 1.5em;</h4><blockquote>
+<p>行距</p>
+</blockquote>
+<h4 id="direction-靠左-‘ltr’-及靠右-‘rtl’"><a href="#direction-靠左-‘ltr’-及靠右-‘rtl’" class="headerlink" title="direction: 靠左 ‘ltr’ 及靠右 ‘rtl’;"></a>direction: 靠左 ‘ltr’ 及靠右 ‘rtl’;</h4><blockquote>
+<p>設定文字的方向</p>
+</blockquote>
+<h4 id="text-align-left-or-right-or-center-or-justify-段落除了最後一行外，每一行都應該佔據容器方框的整個寬度"><a href="#text-align-left-or-right-or-center-or-justify-段落除了最後一行外，每一行都應該佔據容器方框的整個寬度" class="headerlink" title="text-align: left or right or center or justify; (段落除了最後一行外，每一行都應該佔據容器方框的整個寬度)"></a>text-align: left or right or center or justify; (段落除了最後一行外，每一行都應該佔據容器方框的整個寬度)</h4><blockquote>
+<p>對齊</p>
+</blockquote>
+<h4 id="text-shadow-1px-2px-111111-左右多遠-上下多遠-模糊量"><a href="#text-shadow-1px-2px-111111-左右多遠-上下多遠-模糊量" class="headerlink" title="text-shadow: 1px 2px #111111;(左右多遠,上下多遠,模糊量)"></a>text-shadow: 1px 2px #111111;(左右多遠,上下多遠,模糊量)</h4><blockquote>
+<p>陰影(CSS3)</p>
+</blockquote>
+<h2 id="盒子模型-box-model"><a href="#盒子模型-box-model" class="headerlink" title="盒子模型(box model)"></a>盒子模型(box model)</h2><p>由四個部分組合：margin(外距)、border(邊框)、padding(內距)、content(內容)。它控制著頁面各元素的寬與高，比如當我們設定了一個元素的寬高時，所設定的數值還要再加上 padding 和 border，最後才會是這個元素的實際尺寸。如果一個區塊層級的元素位在另一個區塊層級元素內，那麼外面的方框就被稱為 <strong>容器</strong> 元素或 <strong>父</strong> 元素。</p>
+<img src="/2019/12/13/2019-12-13-css-base/boxmodel.jpg" title="This is an image">
+<h4 id="width-200px"><a href="#width-200px" class="headerlink" title="width: 200px;"></a>width: 200px;</h4><blockquote>
+<p>元素寬度：<br>單位有：px, em, %，css 3 多了 vw(可視視窗高) vh(可視視窗寬)。</p>
+</blockquote>
+<h4 id="min-width-max-width"><a href="#min-width-max-width" class="headerlink" title="min-width max-width"></a>min-width max-width</h4><blockquote>
+<p>限制寬度</p>
+</blockquote>
+<h4 id="height-200px"><a href="#height-200px" class="headerlink" title="height: 200px;"></a>height: 200px;</h4><blockquote>
+<p>元素高度：<br>同上。</p>
+</blockquote>
+<h4 id="min-height-max-height"><a href="#min-height-max-height" class="headerlink" title="min-height max-height"></a>min-height max-height</h4><blockquote>
+<p>限制高度  </p>
+</blockquote>
+<p>ps.<br><strong>使用px：網頁上設定一個 100px*100px 的正方形，當我們縮放螢幕的時候，這個元素並不會隨著變動寬高。<br>使用 %：<br>使用 % 的時候，如果我們的元素內並沒有任何內容，即使設定為 100%，是不會顯示出任何東西。<br>使用vh、vw：使用上和百分比很像，當填入 30vh 和 30vw 時，意思就是這個元素要占整個螢幕可視範圍的30%，很重要的是，這個區塊範圍會隨著瀏覽器的縮放而改變。設計 RWD 時，圖片大小可利用此單位。</strong></p>
+<h4 id="margin-auto-瀏覽器自行設定-or-與邊界元素有關-or-px-or-em"><a href="#margin-auto-瀏覽器自行設定-or-與邊界元素有關-or-px-or-em" class="headerlink" title="margin: auto(瀏覽器自行設定) or %(與邊界元素有關) or px or em;"></a>margin: auto(瀏覽器自行設定) or %(與邊界元素有關) or px or em;</h4><blockquote>
+<p>外距(兩個相連元素之間的間距)。  </p>
+<blockquote>
+<p>設定方式：<br>1.margin:上 右 下 左;  // 填入數值<br>2.margin:上下 左右;<br>3.margin:上 左右 下;<br>4.margin:四邊同値;<br>獨立設定：<br>margin-top：與上方元素的距離<br>margin-right：與右方元素的距離<br>margin-bottom：與下方元素的距離<br>margin-left：與左方元素的距離  </p>
+</blockquote>
+</blockquote>
+<h4 id="padding-同上，margin-改成-padding-即可。"><a href="#padding-同上，margin-改成-padding-即可。" class="headerlink" title="padding: 同上，margin 改成 padding 即可。"></a>padding: 同上，margin 改成 padding 即可。</h4><blockquote>
+<p>內距(邊框跟內容之間的空間)，加入可提高閱讀性。  </p>
+<blockquote>
+<p>設定方式跟獨立設定同上。  </p>
+</blockquote>
+</blockquote>
+<h4 id="border-10px-solid-000-四邊-大小-樣式-顏色"><a href="#border-10px-solid-000-四邊-大小-樣式-顏色" class="headerlink" title="border: 10px solid #000; //四邊(大小 樣式 顏色)"></a>border: 10px solid #000; //四邊(大小 樣式 顏色)</h4><blockquote>
+<p>邊框</p>
+<blockquote>
+<p>設定方式：<br>1.border-width: 2px 1px 1px 2px; // 對應 上 右 下 左<br>2.border-style: solid 單實線  dotted 方格點 dashed 短線 double 兩條實線 groove 刻入頁面  ridge 突出頁面 inset 嵌入頁面 hidden/none 無邊框<br>3.border-color: red red red red; // 對應 上 右 下 左<br>4.border-image: url(“圖片位置”) 11 11 11 11 stretch;   stretch 延伸影像 repeat 重複影像 round 重複影像<br>5.border-radius: 5px, 10px, px, 10px;  // 圓角<br>若 border-radius 設定跟方框高度一樣，就可以做出圓形。<br>獨立設定：同 padding。  </p>
+</blockquote>
+</blockquote>
+<p>若要準確控制版面不破版，原本所設定的尺寸還需要再扣掉 border/padding，但是這樣每次設尺寸都要做計算，這時可以使用 <code>box-sizing</code> 此屬性，方便我們在設定 width、height 上更直觀。</p>
+<h4 id="box-sizing-content-box-or-border-box-or-inherit"><a href="#box-sizing-content-box-or-border-box-or-inherit" class="headerlink" title="box-sizing: content-box or border-box or inherit;"></a>box-sizing: content-box or border-box or inherit;</h4><blockquote>
+<p>content-box：預設值，元素實際寬高＝所設定的數值＋border＋padding。<br>border-box：元素實際寬高＝所設定的數值(已包含border和padding)。<br>inherit：繼承至父層的 broder-sizing 設定値。   </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> width: 300px; // 設定寬度</span><br><span class="line"> height: 100px; // 設定高度</span><br><span class="line"> border: 1px solid black;  //設定框線樣式</span><br><span class="line"> background-color: pink;  //設定背景</span><br><span class="line"> margin:20px;       //設定外距</span><br><span class="line"> padding:20px;      //設定內距</span><br><span class="line"> box-sizing: border-box;  //設定border及padding值包含在長寬內</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="display-inline-區塊轉為行內元素，與鄰近元素保持在同一行-block-行內元素轉為區塊，另起一行-inlien-block-區塊元素像行內元素一樣流動，但保持區塊元素其他特性-none-隱藏元素，頁面上看不到"><a href="#display-inline-區塊轉為行內元素，與鄰近元素保持在同一行-block-行內元素轉為區塊，另起一行-inlien-block-區塊元素像行內元素一樣流動，但保持區塊元素其他特性-none-隱藏元素，頁面上看不到" class="headerlink" title="display: inline 區塊轉為行內元素，與鄰近元素保持在同一行 block 行內元素轉為區塊，另起一行 inlien-block;  區塊元素像行內元素一樣流動，但保持區塊元素其他特性 none; 隱藏元素，頁面上看不到"></a>display: inline 區塊轉為行內元素，與鄰近元素保持在同一行 block 行內元素轉為區塊，另起一行 inlien-block;  區塊元素像行內元素一樣流動，但保持區塊元素其他特性 none; 隱藏元素，頁面上看不到</h4><blockquote>
+<p>更改行內/區塊狀態，將行內元素轉成區塊元素。</p>
+</blockquote>
+<h4 id="visibility-hidden-隱藏"><a href="#visibility-hidden-隱藏" class="headerlink" title="visibility: hidden 隱藏"></a>visibility: hidden 隱藏</h4><blockquote>
+<p>隱藏元素，不顯示內容，但將原有位置空下(產生空白)。若不要有空白，用 display 屬性。</p>
+</blockquote>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><h4 id="position-top-right-bottom-left-長度、百分比、或是-auto-static-預設-absolute-絕對-relative-相對-fixed"><a href="#position-top-right-bottom-left-長度、百分比、或是-auto-static-預設-absolute-絕對-relative-相對-fixed" class="headerlink" title="position: top right bottom left(長度、百分比、或是 auto) static 預設 absolute 絕對 relative 相對 fixed"></a>position: top right bottom left(長度、百分比、或是 auto) static 預設 absolute 絕對 relative 相對 fixed</h4><blockquote>
+<p>元素在網頁上的定位。</p>
+</blockquote>
+<p><strong>ps.<br>absolute(絕對): 放在瀏覽器內的某個位置 (依 top、bottom、left、和 right 的值而定)。當使用者將網頁往下拉時，元素也會跟著改變位置。ps: 網頁的四個邊界開始起算。<br>relative(相對): 元素擺在相對於另一個元素的任何地方。要定位的元素加上 <code>position:absolute</code> 還有(top,left,right,bottom)及對應的值，並且在他的父元素加上 <code>position:relative</code>，那個元素就可在在它的父元素範圍內任意定位。<br>fixed: 這代表元素會被放在瀏覽器內的某個位置 (依 top、bottom、left、和 right 的值而定)。當使用者將網頁往下拉時，元素的位置不會改變。</strong> </p>
+<h4 id="z-index-auto-預設值-數字-inherit-繼承自父層順序"><a href="#z-index-auto-預設值-數字-inherit-繼承自父層順序" class="headerlink" title="z-index: auto 預設值 數字 inherit 繼承自父層順序"></a>z-index: auto 預設值 數字 inherit 繼承自父層順序</h4><blockquote>
+<p>用來決定元素重疊的順序，當兩個元素有重疊的情況時。z-index 值比較大個元素會被放在上面。</p>
+</blockquote>
+<h4 id="float-left、right、none"><a href="#float-left、right、none" class="headerlink" title="float: left、right、none;"></a>float: left、right、none;</h4><blockquote>
+<p>定義 box 的浮動，常見是將文字繞著一個圖案顯現或區塊排版。最後記得要使用清除浮動，避免跑版。</p>
+</blockquote>
+<h4 id="clear-left、right、both、none"><a href="#clear-left、right、both、none" class="headerlink" title="clear: left、right、both、none;"></a>clear: left、right、both、none;</h4><blockquote>
+<p>清除用來抵銷 float 屬性的作用</p>
+</blockquote>
+<h4 id="某元素置中"><a href="#某元素置中" class="headerlink" title="某元素置中"></a>某元素置中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  margin: 0 auto;  // 元素置中</span><br><span class="line">  width: 200px;</span><br><span class="line">  text-align: center;  // 內容也置中</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="overflow-auto-自動使用捲軸-visible-直接超出範圍，不使用捲軸-hidden-隱藏-scroll-捲軸-inherit-繼承自父元素"><a href="#overflow-auto-自動使用捲軸-visible-直接超出範圍，不使用捲軸-hidden-隱藏-scroll-捲軸-inherit-繼承自父元素" class="headerlink" title="overflow: auto 自動使用捲軸 visible 直接超出範圍，不使用捲軸 hidden 隱藏 scroll 捲軸 inherit 繼承自父元素"></a>overflow: auto 自動使用捲軸 visible 直接超出範圍，不使用捲軸 hidden 隱藏 scroll 捲軸 inherit 繼承自父元素</h4><blockquote>
+<p>當 content 超出 box 時的處理。  </p>
+</blockquote>
+<h2 id="游標樣式"><a href="#游標樣式" class="headerlink" title="游標樣式"></a>游標樣式</h2><h4 id="cursor-auto-or-crosshair-pointer-help-wait-url-“位置”"><a href="#cursor-auto-or-crosshair-pointer-help-wait-url-“位置”" class="headerlink" title="cursor: auto or crosshair pointer help wait url(“位置”);"></a>cursor: auto or crosshair pointer help wait url(“位置”);</h4><h1 id="元素定位處理-排版-還有其他方便的作法，例如-Flex、Grid-…"><a href="#元素定位處理-排版-還有其他方便的作法，例如-Flex、Grid-…" class="headerlink" title="元素定位處理(排版)還有其他方便的作法，例如 Flex、Grid …"></a>元素定位處理(排版)還有其他方便的作法，例如 Flex、Grid …</h1><h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><h4 id="Flex-中分為外容器與內元件"><a href="#Flex-中分為外容器與內元件" class="headerlink" title="Flex 中分為外容器與內元件"></a>Flex 中分為外容器與內元件</h4><img src="/2019/12/13/2019-12-13-css-base/flexa.png" title="This is an image">
+<h3 id="flex-外容器屬性"><a href="#flex-外容器屬性" class="headerlink" title="flex 外容器屬性"></a>flex 外容器屬性</h3><h4 id="display-flex-inlien-flex"><a href="#display-flex-inlien-flex" class="headerlink" title="display: flex | inlien-flex;"></a>display: flex | inlien-flex;</h4><blockquote>
+<p>一開始就要宣告為 flex 才開始用  </p>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex1.png" title="This is an image">
+<h4 id="flex-direction-row-row-reverse-column-column-reverse"><a href="#flex-direction-row-row-reverse-column-column-reverse" class="headerlink" title="flex-direction: row | row-reverse | column | column-reverse"></a>flex-direction: row | row-reverse | column | column-reverse</h4><blockquote>
+<p>決定內元件排序方向，改變主軸線方向 — or |，預設狀態：</p>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flexb.jpg" title="This is an image">
+<blockquote>
+<blockquote>
+<p>row; //水平由軸線左至右排<br>row-reverse  //水平由軸線右至左排<br>column  //垂直由軸線上至下排<br>column-reverse  //垂直由軸線下至上排  </p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex2.jpg" title="This is an image">
+<h4 id="flex-wrap-nowrap-wrap-wrap-reverse"><a href="#flex-wrap-nowrap-wrap-wrap-reverse" class="headerlink" title="flex-wrap: nowrap | wrap | wrap-reverse"></a>flex-wrap: nowrap | wrap | wrap-reverse</h4><blockquote>
+<p>超出範圍時是否換行動的屬性</p>
+<blockquote>
+<p>nowrap;   //不換行<br>wrap;   //換行<br>wrap-reverse;   //換行時反轉</p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex3.png" title="This is an image">
+<h4 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow:"></a>flex-flow:</h4><blockquote>
+<p><code>flex-direction</code> 與 <code>flex-wrap</code> 的縮寫，在其前後帶上相對應的值即可 <code>flex-flow: row nowrap</code>;</p>
+</blockquote>
+<h4 id="justify-content-flex-start-…"><a href="#justify-content-flex-start-…" class="headerlink" title="justify-content: flex-start; …"></a>justify-content: flex-start; …</h4><blockquote>
+<p>內元件的元素主軸對齊(間隔)，看是 <code>flex-direction</code> 是 row or column</p>
+<blockquote>
+<p>flex-start;   //靠左對齊<br>flex-end;   //靠右對齊<br>center;   //水平置中對齊<br>space-between;  //平均分配內元件，分開對齊(左右不留空)<br>space-around;   //平均分配內元件，分開對齊(左右留空)  </p>
+</blockquote>
+</blockquote>
+<p>以 <code>flex-direction: row</code> 為例：</p>
+<img src="/2019/12/13/2019-12-13-css-base/flex4.jpg" title="This is an image">
+<h4 id="align-items-stretch-…"><a href="#align-items-stretch-…" class="headerlink" title="align-items: stretch; …"></a>align-items: stretch; …</h4><blockquote>
+<p>相對於上面的屬性，交錯軸對齊設定   |</p>
+<blockquote>
+<p>flex-start;   //靠軸線上端對齊<br>flex-end;    //靠軸線下端對齊<br>center;   //置軸線中心對齊<br>stretch;  //預設值，延伸內元件全部撐開至 Flexbox 高度<br>baseline; //以所有內元件的基線作為對齊標準(左右留空)</p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex5.jpg" title="This is an image">
+<h4 id="align-content-flex-start-…"><a href="#align-content-flex-start-…" class="headerlink" title="align-content: flex-start; …"></a>align-content: flex-start; …</h4><blockquote>
+<p>align-items 的多行版本，排列方式多一些</p>
+<blockquote>
+<p>flex-start;   //靠軸線上端對齊<br>flex-end;    //靠軸線下端對齊<br>center;   //置軸線中心對齊<br>stretch;  //預設值，延伸內元件全部撐開至 Flexbox 的高度<br>space-between; //平均分配內元件，分開對齊(上下不留空)<br>space-around;  //平均分配內元件，分開對齊(上下留空)  </p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex6.jpg" title="This is an image">
+<h3 id="flex-內元件屬性"><a href="#flex-內元件屬性" class="headerlink" title="flex 內元件屬性"></a>flex 內元件屬性</h3><h4 id="flex-grow-數字"><a href="#flex-grow-數字" class="headerlink" title="flex-grow: 數字;"></a>flex-grow: 數字;</h4><blockquote>
+<p>元件的伸展性，預設值為 0。</p>
+</blockquote>
+<h4 id="flex-shrink-數字"><a href="#flex-shrink-數字" class="headerlink" title="flex-shrink: 數字;"></a>flex-shrink: 數字;</h4><blockquote>
+<p>元件的收縮性，當空間分配還不足時的當前元件的收縮性，預設值為 0。  </p>
+</blockquote>
+<h4 id="flex-basis-單位值-px-auto"><a href="#flex-basis-單位值-px-auto" class="headerlink" title="flex-basis: 單位值(px) | auto;"></a>flex-basis: 單位值(px) | auto;</h4><blockquote>
+<p>元件的基準值，以自己的基本小大為單位。</p>
+</blockquote>
+<h4 id="align-self：center-flex-start-flex-end-stretch-baseline"><a href="#align-self：center-flex-start-flex-end-stretch-baseline" class="headerlink" title="align-self：center | flex-start | flex-end | stretch | baseline;"></a>align-self：center | flex-start | flex-end | stretch | baseline;</h4><blockquote>
+<p>調整內元件交錯軸的對齊設定(主軸不能另外設定)，也可以個別設定單一元件。</p>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/flex7.jpg" title="This is an image">
+<h4 id="order-數字"><a href="#order-數字" class="headerlink" title="order: 數字;"></a>order: 數字;</h4><blockquote>
+<p>重新定義元件的排列順序，依據數值的大小</p>
+</blockquote>
+<h2 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h2><h4 id="一樣分成內外容器。Grid-和-flex-最大不同之處，透過-grid-template-來定義版型的結構，分別由-column-及-row-定義出直排與橫列的格線，內容再依隔線作安排。"><a href="#一樣分成內外容器。Grid-和-flex-最大不同之處，透過-grid-template-來定義版型的結構，分別由-column-及-row-定義出直排與橫列的格線，內容再依隔線作安排。" class="headerlink" title="一樣分成內外容器。Grid 和 flex 最大不同之處，透過 grid template 來定義版型的結構，分別由 column 及 row 定義出直排與橫列的格線，內容再依隔線作安排。"></a>一樣分成內外容器。Grid 和 flex 最大不同之處，透過 grid template 來定義版型的結構，分別由 column 及 row 定義出直排與橫列的格線，內容再依隔線作安排。</h4><h3 id="外容器"><a href="#外容器" class="headerlink" title="外容器"></a>外容器</h3><h4 id="display-grid-inline-grid-subgrid"><a href="#display-grid-inline-grid-subgrid" class="headerlink" title="display: grid | inline-grid | subgrid;"></a>display: grid | inline-grid | subgrid;</h4><blockquote>
+<p>定義容器的顯示類型</p>
+</blockquote>
+<h4 id="grid-template-columns-…-…"><a href="#grid-template-columns-…-…" class="headerlink" title="grid-template-columns:  … |   …;"></a>grid-template-columns: <track-size> … | <line-name> <track-size> …;</track-size></line-name></track-size></h4><blockquote>
+<p>橫列</p>
+<blockquote>
+<p>track-size: 可使用彈性的長度、百分比或分數 (分數的部分需使用 fr 單位)<br>line-name: 可自行命名的名稱</p>
+</blockquote>
+</blockquote>
+<h4 id="grid-template-rows-…-…"><a href="#grid-template-rows-…-…" class="headerlink" title="grid-template-rows:  … |   …;"></a>grid-template-rows: <track-size> … | <line-name> <track-size> …;</track-size></line-name></track-size></h4><blockquote>
+<p>直行</p>
+<blockquote>
+<p>track-size: 可使用彈性的長度、百分比或分數 (分數的部分需使用 fr 單位)<br>line-name: 可自行命名的名稱</p>
+</blockquote>
+</blockquote>
+<img src="/2019/12/13/2019-12-13-css-base/grid.png" title="This is an image">
+<p>範例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 200px 50px auto 50px 200px;</span><br><span class="line">  grid-template-rows: 25% 100px auto;</span><br><span class="line">  height: 100vh;</span><br><span class="line">  width: 940px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2019/12/13/2019-12-13-css-base/grid1.png" title="This is an image">
+<h4 id="grid-template-columns-repeat-2-1fr-2fr-100px"><a href="#grid-template-columns-repeat-2-1fr-2fr-100px" class="headerlink" title="grid-template-columns: repeat(2, 1fr 2fr) 100px;"></a>grid-template-columns: repeat(2, 1fr 2fr) 100px;</h4><blockquote>
+<p>repeat({次數}, {格線…} | {格線…}) | {格線…}</p>
+<blockquote>
+<p>fr：空間單位<br>repeat：重複隔線</p>
+</blockquote>
+</blockquote>
+<h4 id="grid-template-areas"><a href="#grid-template-areas" class="headerlink" title="grid-template-areas:"></a>grid-template-areas:</h4><blockquote>
+<p>透過 area 定義區塊在 template 上的位置，配合 gird-area </p>
+<blockquote>
+<p>內元素 grid-area：定義空間的名稱<br>外元素 grid-template-areas：定義空間的位置</p>
+</blockquote>
+</blockquote>
+<p>範例</p>
+<img src="/2019/12/13/2019-12-13-css-base/grid2.png" title="This is an image">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 200px 50px auto 50px 200px;</span><br><span class="line">  grid-template-rows: 25% 100px auto;</span><br><span class="line">  grid-template-areas:</span><br><span class="line">    &quot;header header header header header&quot;</span><br><span class="line">    &quot;side  main main main main&quot;</span><br><span class="line">    &quot;side footer footer footer footer&quot;;</span><br><span class="line">  height: 100vh;</span><br><span class="line">  width: 940px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br><span class="line">.item-a &#123;</span><br><span class="line">  grid-area: header;</span><br><span class="line">  background-color: purple;</span><br><span class="line">&#125;</span><br><span class="line">.item-b &#123;</span><br><span class="line">  grid-area: main;</span><br><span class="line">  background-color: orange;</span><br><span class="line">&#125;</span><br><span class="line">.item-c &#123;</span><br><span class="line">  grid-area: side;</span><br><span class="line">  background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.item-d &#123;</span><br><span class="line">  grid-area: footer;</span><br><span class="line">  background-color: gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>ps.空間不能分離且是唯一的，錯誤範例: “side main side”</em></p>
+<p>其他更詳細說明，請參考以下網站。</p>
+<h2 id="補充說明："><a href="#補充說明：" class="headerlink" title="補充說明："></a>補充說明：</h2><p>###CSS RESET<br>各瀏覽器其實都有預設一些 CSS，我們稱之為瀏覽器默認樣式(User Agent Stylesheet)，為了增進瀏覽體驗，但是各家瀏覽器的默認樣式並不相同。因此寫一個網頁的時候，我們另外寫了 CSS 檔，而網頁顯示出來的畫面，實際上是瀏覽器默認樣式加上我們的 CSS 。也因而造成同一個網頁在不同的瀏覽器看到的畫面有點不一樣。為了處理這個問題，就有了 CSS RESET，它可以幫我們清除瀏覽器默認樣式，依照我們撰寫的 CSS 檔來顯示。這樣就可以統一樣式了。</p>
+<p>目前公認是 meyerweb 的版本。</p>
+<pre><code>/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: &apos;&apos;;
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+</code></pre><p>參考：<br><a href="https://w3bits.com/css-box-model/" target="_blank" rel="noopener">https://w3bits.com/css-box-model/</a><br><a href="https://wcc723.github.io/css/2017/07/21/css-flex/" target="_blank" rel="noopener">https://wcc723.github.io/css/2017/07/21/css-flex/</a><br><a href="https://wcc723.github.io/css/2017/03/22/css-grid-layout/" target="_blank" rel="noopener">https://wcc723.github.io/css/2017/03/22/css-grid-layout/</a><br><a href="https://pjchender.blogspot.com/2015/04/css-3vh-vw.html" target="_blank" rel="noopener">https://pjchender.blogspot.com/2015/04/css-3vh-vw.html</a><br><a href="https://blog.techbridge.cc/2017/02/03/css-grid-intro/" target="_blank" rel="noopener">https://blog.techbridge.cc/2017/02/03/css-grid-intro/</a><br><a href="https://gridbyexample.com/" target="_blank" rel="noopener">https://gridbyexample.com/</a><br><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener">https://css-tricks.com/snippets/css/complete-guide-grid/</a><br><a href="https://developer.mozilla.org/zh-TW/docs/Web/CSS" target="_blank" rel="noopener">https://developer.mozilla.org/zh-TW/docs/Web/CSS</a><br><a href="https://ithelp.ithome.com.tw/articles/10214957" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10214957</a><br><a href="https://medium.com/change-or-die/css-%E5%85%A5%E9%96%80%E7%AD%86%E8%A8%98-%E4%B8%80-box-model-box-sizing-56ddc49ac89e" target="_blank" rel="noopener">https://medium.com/change-or-die/css-%E5%85%A5%E9%96%80%E7%AD%86%E8%A8%98-%E4%B8%80-box-model-box-sizing-56ddc49ac89e</a>  </p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/12/2019-12-12-DOM/" rel="next" title="JavaScript 操作 DOM">
+                <i class="fa fa-chevron-left"></i> JavaScript 操作 DOM
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/13/RWD-base/" rel="prev" title="RWD 基本知識">
+                RWD 基本知識 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">jerry wu</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jw310" title="GitHub &rarr; https://github.com/jw310" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/yourname" title="Twitter &rarr; https://twitter.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://instagram.com/yourname" title="Instagram &rarr; https://instagram.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS是什麼"><span class="nav-number">1.</span> <span class="nav-text">CSS是什麼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入到-HTML-三種方式"><span class="nav-number">2.</span> <span class="nav-text">加入到 HTML 三種方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#規則包含兩個部分：選取器-選取元素-和宣告"><span class="nav-number">3.</span> <span class="nav-text">規則包含兩個部分：選取器(選取元素)和宣告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#階層規範-若兩個規則同時套用到同一個元素上"><span class="nav-number">4.</span> <span class="nav-text">階層規範(若兩個規則同時套用到同一個元素上)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#繼承"><span class="nav-number">5.</span> <span class="nav-text">繼承</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#屬性種類"><span class="nav-number"></span> <span class="nav-text">屬性種類</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#顏色"><span class="nav-number">1.</span> <span class="nav-text">顏色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#color-DarkCyan"><span class="nav-number">1.0.1.</span> <span class="nav-text">color: DarkCyan;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-white"><span class="nav-number">1.0.2.</span> <span class="nav-text">background-color: white;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#opacity-0-5"><span class="nav-number">1.0.3.</span> <span class="nav-text">opacity: 0,5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-color-rgba-100-100-90-0-5"><span class="nav-number">1.0.4.</span> <span class="nav-text">background-color: rgba(100,100,90,0.5);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-image-url-位置"><span class="nav-number">1.0.5.</span> <span class="nav-text">background-image: url(位置);</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">2.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#font-family-Arial-Helvetica-Georgia"><span class="nav-number">2.0.1.</span> <span class="nav-text">font-family: Arial, Helvetica, Georgia</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-size-12px"><span class="nav-number">2.0.2.</span> <span class="nav-text">font-size: 12px;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-weight-normal-or-bold"><span class="nav-number">2.0.3.</span> <span class="nav-text">font-weight: normal or bold;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#font-style-normal-or-italic-or-oblique"><span class="nav-number">2.0.4.</span> <span class="nav-text">font-style: normal or italic or oblique;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text-transform-uppercase-大-or-lowercase-小-or-capitalize-每個字的第一個字變大寫"><span class="nav-number">2.0.5.</span> <span class="nav-text">text-transform: uppercase(大) or lowercase(小) or capitalize(每個字的第一個字變大寫);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text-decoration-none-or-underline-底線-or-overline-文字上方加線-or-line-through-刪節線-or-blink-動態閃爍"><span class="nav-number">2.0.6.</span> <span class="nav-text">text-decoration: none or underline(底線) or overline(文字上方加線) or line-through(刪節線) or blink(動態閃爍);</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#line-height-1-5em"><span class="nav-number">2.0.7.</span> <span class="nav-text">line-height: 1.5em;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#direction-靠左-‘ltr’-及靠右-‘rtl’"><span class="nav-number">2.0.8.</span> <span class="nav-text">direction: 靠左 ‘ltr’ 及靠右 ‘rtl’;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text-align-left-or-right-or-center-or-justify-段落除了最後一行外，每一行都應該佔據容器方框的整個寬度"><span class="nav-number">2.0.9.</span> <span class="nav-text">text-align: left or right or center or justify; (段落除了最後一行外，每一行都應該佔據容器方框的整個寬度)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text-shadow-1px-2px-111111-左右多遠-上下多遠-模糊量"><span class="nav-number">2.0.10.</span> <span class="nav-text">text-shadow: 1px 2px #111111;(左右多遠,上下多遠,模糊量)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒子模型-box-model"><span class="nav-number">3.</span> <span class="nav-text">盒子模型(box model)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#width-200px"><span class="nav-number">3.0.1.</span> <span class="nav-text">width: 200px;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-width-max-width"><span class="nav-number">3.0.2.</span> <span class="nav-text">min-width max-width</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#height-200px"><span class="nav-number">3.0.3.</span> <span class="nav-text">height: 200px;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-height-max-height"><span class="nav-number">3.0.4.</span> <span class="nav-text">min-height max-height</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#margin-auto-瀏覽器自行設定-or-與邊界元素有關-or-px-or-em"><span class="nav-number">3.0.5.</span> <span class="nav-text">margin: auto(瀏覽器自行設定) or %(與邊界元素有關) or px or em;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#padding-同上，margin-改成-padding-即可。"><span class="nav-number">3.0.6.</span> <span class="nav-text">padding: 同上，margin 改成 padding 即可。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#border-10px-solid-000-四邊-大小-樣式-顏色"><span class="nav-number">3.0.7.</span> <span class="nav-text">border: 10px solid #000; //四邊(大小 樣式 顏色)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box-sizing-content-box-or-border-box-or-inherit"><span class="nav-number">3.0.8.</span> <span class="nav-text">box-sizing: content-box or border-box or inherit;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-inline-區塊轉為行內元素，與鄰近元素保持在同一行-block-行內元素轉為區塊，另起一行-inlien-block-區塊元素像行內元素一樣流動，但保持區塊元素其他特性-none-隱藏元素，頁面上看不到"><span class="nav-number">3.0.9.</span> <span class="nav-text">display: inline 區塊轉為行內元素，與鄰近元素保持在同一行 block 行內元素轉為區塊，另起一行 inlien-block;  區塊元素像行內元素一樣流動，但保持區塊元素其他特性 none; 隱藏元素，頁面上看不到</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#visibility-hidden-隱藏"><span class="nav-number">3.0.10.</span> <span class="nav-text">visibility: hidden 隱藏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位置"><span class="nav-number">4.</span> <span class="nav-text">位置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#position-top-right-bottom-left-長度、百分比、或是-auto-static-預設-absolute-絕對-relative-相對-fixed"><span class="nav-number">4.0.1.</span> <span class="nav-text">position: top right bottom left(長度、百分比、或是 auto) static 預設 absolute 絕對 relative 相對 fixed</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#z-index-auto-預設值-數字-inherit-繼承自父層順序"><span class="nav-number">4.0.2.</span> <span class="nav-text">z-index: auto 預設值 數字 inherit 繼承自父層順序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#float-left、right、none"><span class="nav-number">4.0.3.</span> <span class="nav-text">float: left、right、none;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clear-left、right、both、none"><span class="nav-number">4.0.4.</span> <span class="nav-text">clear: left、right、both、none;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#某元素置中"><span class="nav-number">4.0.5.</span> <span class="nav-text">某元素置中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#overflow-auto-自動使用捲軸-visible-直接超出範圍，不使用捲軸-hidden-隱藏-scroll-捲軸-inherit-繼承自父元素"><span class="nav-number">4.0.6.</span> <span class="nav-text">overflow: auto 自動使用捲軸 visible 直接超出範圍，不使用捲軸 hidden 隱藏 scroll 捲軸 inherit 繼承自父元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游標樣式"><span class="nav-number">5.</span> <span class="nav-text">游標樣式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cursor-auto-or-crosshair-pointer-help-wait-url-“位置”"><span class="nav-number">5.0.1.</span> <span class="nav-text">cursor: auto or crosshair pointer help wait url(“位置”);</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#元素定位處理-排版-還有其他方便的作法，例如-Flex、Grid-…"><span class="nav-number"></span> <span class="nav-text">元素定位處理(排版)還有其他方便的作法，例如 Flex、Grid …</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Flex"><span class="nav-number">1.</span> <span class="nav-text">Flex</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Flex-中分為外容器與內元件"><span class="nav-number">1.0.1.</span> <span class="nav-text">Flex 中分為外容器與內元件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-外容器屬性"><span class="nav-number">1.1.</span> <span class="nav-text">flex 外容器屬性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#display-flex-inlien-flex"><span class="nav-number">1.1.1.</span> <span class="nav-text">display: flex | inlien-flex;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-direction-row-row-reverse-column-column-reverse"><span class="nav-number">1.1.2.</span> <span class="nav-text">flex-direction: row | row-reverse | column | column-reverse</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-wrap-nowrap-wrap-wrap-reverse"><span class="nav-number">1.1.3.</span> <span class="nav-text">flex-wrap: nowrap | wrap | wrap-reverse</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-flow"><span class="nav-number">1.1.4.</span> <span class="nav-text">flex-flow:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-content-flex-start-…"><span class="nav-number">1.1.5.</span> <span class="nav-text">justify-content: flex-start; …</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-items-stretch-…"><span class="nav-number">1.1.6.</span> <span class="nav-text">align-items: stretch; …</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-content-flex-start-…"><span class="nav-number">1.1.7.</span> <span class="nav-text">align-content: flex-start; …</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex-內元件屬性"><span class="nav-number">1.2.</span> <span class="nav-text">flex 內元件屬性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-grow-數字"><span class="nav-number">1.2.1.</span> <span class="nav-text">flex-grow: 數字;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-shrink-數字"><span class="nav-number">1.2.2.</span> <span class="nav-text">flex-shrink: 數字;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-basis-單位值-px-auto"><span class="nav-number">1.2.3.</span> <span class="nav-text">flex-basis: 單位值(px) | auto;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-self：center-flex-start-flex-end-stretch-baseline"><span class="nav-number">1.2.4.</span> <span class="nav-text">align-self：center | flex-start | flex-end | stretch | baseline;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#order-數字"><span class="nav-number">1.2.5.</span> <span class="nav-text">order: 數字;</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grid"><span class="nav-number">2.</span> <span class="nav-text">Grid</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一樣分成內外容器。Grid-和-flex-最大不同之處，透過-grid-template-來定義版型的結構，分別由-column-及-row-定義出直排與橫列的格線，內容再依隔線作安排。"><span class="nav-number">2.0.1.</span> <span class="nav-text">一樣分成內外容器。Grid 和 flex 最大不同之處，透過 grid template 來定義版型的結構，分別由 column 及 row 定義出直排與橫列的格線，內容再依隔線作安排。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外容器"><span class="nav-number">2.1.</span> <span class="nav-text">外容器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#display-grid-inline-grid-subgrid"><span class="nav-number">2.1.1.</span> <span class="nav-text">display: grid | inline-grid | subgrid;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-template-columns-…-…"><span class="nav-number">2.1.2.</span> <span class="nav-text">grid-template-columns:  … |   …;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-template-rows-…-…"><span class="nav-number">2.1.3.</span> <span class="nav-text">grid-template-rows:  … |   …;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-template-columns-repeat-2-1fr-2fr-100px"><span class="nav-number">2.1.4.</span> <span class="nav-text">grid-template-columns: repeat(2, 1fr 2fr) 100px;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#grid-template-areas"><span class="nav-number">2.1.5.</span> <span class="nav-text">grid-template-areas:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#補充說明："><span class="nav-number">3.</span> <span class="nav-text">補充說明：</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jerry wu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="總字數">17k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="所需總閱讀時間">29 分鐘</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jwblog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+
+
+
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('複製').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('複製');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
