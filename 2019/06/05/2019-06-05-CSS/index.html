@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="Jw的學習大小事">
 <meta property="og:description" content="偽元素 (pseudo element) 和偽類 (pseudo class) 差在哪有時候 CSS 裡會出現單冒號 : 跟雙冒號 :: 的符號，單冒號開頭的是偽類 (pseudo class) ，雙冒號開頭的是偽元素 (pseudo element) 。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2020-01-09T14:00:03.000Z">
+<meta property="og:updated_time" content="2020-01-09T14:05:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS偽類與偽元素">
 <meta name="twitter:description" content="偽元素 (pseudo element) 和偽類 (pseudo class) 差在哪有時候 CSS 裡會出現單冒號 : 跟雙冒號 :: 的符號，單冒號開頭的是偽類 (pseudo class) ，雙冒號開頭的是偽元素 (pseudo element) 。">
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2020-01-09 22:00:03" itemprop="dateModified" datetime="2020-01-09T22:00:03+08:00">2020-01-09</time>
+                <time title="修改時間：2020-01-09 22:05:05" itemprop="dateModified" datetime="2020-01-09T22:05:05+08:00">2020-01-09</time>
               </span>
             
           
@@ -489,7 +489,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
               
-              <span title="文章字數">845</span>
+              <span title="文章字數">940</span>
             </span>
           
 
@@ -499,7 +499,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
               
-              <span title="所需閱讀時間">1 分鐘</span>
+              <span title="所需閱讀時間">2 分鐘</span>
             </span>
           
 
@@ -536,10 +536,14 @@
 <p>ps.現在單一冒號 <code>:</code> 也可以代表偽元素，但要注意瀏覽器是否支援。</p>
 <h2 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h2><h4 id="SCSS-的-amp-符號"><a href="#SCSS-的-amp-符號" class="headerlink" title="SCSS 的 &amp; 符號"></a>SCSS 的 &amp; 符號</h4><p>是scss的语法，代表上一層選擇器(元素)</p>
 <p>有時會看到類似寫法 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.bordered &#123;</span><br><span class="line">  &amp;.float &#123;</span><br><span class="line">    float: left; </span><br><span class="line">  &#125;</span><br><span class="line">  .top &#123;</span><br><span class="line">    margin: 5px; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">其實上面寫法等同於</span><br></pre></td></tr></table></figure>
-<p>.bordered.float {<br>  float: left;<br>}<br>.bordered .top {<br>  margin: 5px;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">`.bordered.float` 是串聯選擇器，作用在同一標籤上  </span><br><span class="line">`.bordered .top` 是後代選擇器，作用在不同標籤上</span><br><span class="line"></span><br><span class="line">有時 CSS 中有定義一些 pseudo-classes (或稱偽類、準類別)，被使用來為元素增加一些特效，如 `:hover`, `:link`, `:visited`,  `:before`, `:after` 等這些以冒號(:)開頭的類別名稱。例如把滑鼠移到某個網頁連結時，連結會變色的 CSS 語法：</span><br></pre></td></tr></table></figure></p>
-<p>a {<br>  font-weight: bold;<br>  text-decoration: none;<br>}<br>a :hover {<br>  color:#FF00FF;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">上述其實還是一種巢狀的結構，只是都作用到同一個元素(例如範例的 a 元素)上。這樣情況就能夠用對 `:hover` 使用 `＆` 符號來代表其作用的父選取器，所以上述的 CSS 範例的 Sass 就可以寫成：</span><br></pre></td></tr></table></figure></p>
-<p>a {<br>  font-weight: bold;<br>  text-decoration: none;<br>  &amp;:hover {<br>    color:#FF00FF;<br>  }<br>}<br><code>`</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.bordered &#123;</span><br><span class="line">  &amp;.float &#123;</span><br><span class="line">    float: left; </span><br><span class="line">  &#125;</span><br><span class="line">  .top &#123;</span><br><span class="line">    margin: 5px; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其實上面寫法等同於</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.bordered.float &#123;</span><br><span class="line">  float: left; </span><br><span class="line">&#125;</span><br><span class="line">.bordered .top &#123;</span><br><span class="line">  margin: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>.bordered.float</code> 是串聯選擇器，作用在同一標籤上<br><code>.bordered .top</code> 是後代選擇器，作用在不同標籤上</p>
+<p>有時 CSS 中有定義一些 pseudo-classes (或稱偽類、準類別)，被使用來為元素增加一些特效，如 <code>:hover</code>, <code>:link</code>, <code>:visited</code>,  <code>:before</code>, <code>:after</code> 等這些以冒號(:)開頭的類別名稱。例如把滑鼠移到某個網頁連結時，連結會變色的 CSS 語法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line">a :hover &#123;</span><br><span class="line">  color:#FF00FF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述其實還是一種巢狀的結構，只是都作用到同一個元素(例如範例的 a 元素)上。這樣情況就能夠用對 <code>:hover</code> 使用 <code>＆</code> 符號來代表其作用的父選取器，所以上述的 CSS 範例的 Sass 就可以寫成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a &#123;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  text-decoration: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color:#FF00FF;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>參考來源：<br><a href="https://www.oxxostudio.tw/articles/201405/css-selector.html" target="_blank" rel="noopener">oxxostudioCSS 偽類 child 和 of-type</a></p>
 
       
@@ -853,7 +857,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="所需總閱讀時間">41 分鐘</span>
+    <span title="所需總閱讀時間">42 分鐘</span>
   
 </div>
 
