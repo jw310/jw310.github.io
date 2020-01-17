@@ -101,18 +101,18 @@
 
 
 
-  <meta name="description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器讀取。">
+  <meta name="description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器可讀取。另一個工具 gulp 跟 webpack 的差異在一個是協助自動化，另外一個是協助前端打包的。gulp 比較偏向命令式的編寫設定，也就是說所有">
 <meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack 介紹">
 <meta property="og:url" content="https://jw310.github.io/2020/01/16/webpack-base/index.html">
 <meta property="og:site_name" content="Jw的學習大小事">
-<meta property="og:description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器讀取。">
+<meta property="og:description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器可讀取。另一個工具 gulp 跟 webpack 的差異在一個是協助自動化，另外一個是協助前端打包的。gulp 比較偏向命令式的編寫設定，也就是說所有">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2020-01-16T16:13:53.000Z">
+<meta property="og:updated_time" content="2020-01-17T06:43:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack 介紹">
-<meta name="twitter:description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器讀取。">
+<meta name="twitter:description" content="webpackwebpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器可讀取。另一個工具 gulp 跟 webpack 的差異在一個是協助自動化，另外一個是協助前端打包的。gulp 比較偏向命令式的編寫設定，也就是說所有">
 
 
 
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2020-01-17 00:13:53" itemprop="dateModified" datetime="2020-01-17T00:13:53+08:00">2020-01-17</time>
+                <time title="修改時間：2020-01-17 14:43:51" itemprop="dateModified" datetime="2020-01-17T14:43:51+08:00">2020-01-17</time>
               </span>
             
           
@@ -474,7 +474,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
               
-              <span title="文章字數">2.3k</span>
+              <span title="文章字數">4.3k</span>
             </span>
           
 
@@ -484,7 +484,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
               
-              <span title="所需閱讀時間">4 分鐘</span>
+              <span title="所需閱讀時間">7 分鐘</span>
             </span>
           
 
@@ -503,13 +503,13 @@
       
 
       
-        <h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><p>webpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，<br>裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器讀取。</p>
+        <h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><p>webpack 在處理整個專案時，它會在內部建立一個依賴的關係圖，<br>裡面記錄著每個頁面所需要用到的模組，並將每個模組綑綁成一個或多個來使用。簡單來說就是可以幫我們打包所有用到的 JavaScript 、SASS … 等檔案，編譯後讓瀏覽器可讀取。另一個工具 gulp 跟 webpack 的差異在一個是協助自動化，另外一個是協助前端打包的。<br>gulp 比較偏向命令式的編寫設定，也就是說所有的編譯動作的邏輯都要自己編寫，webpack 就偏向設定。</p>
 <h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>首先需要用 npm 安裝 webpack 與 webpack-dev-server, 如果你第一次裝，可以用 -g 安裝，以便在任何地方都可以使用該指令：</p>
 <p>webpack //打包工具<br>webpack-dev-server //即時產生一個 server 看執行結果  </p>
 <p><code>npm install -g webpack webpack-dev-server</code>  </p>
 <p>接著安裝指令包 </p>
 <p><code>npm install webpack-cli -g</code></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<h2 id="專案使用"><a href="#專案使用" class="headerlink" title="專案使用"></a>專案使用</h2><ol>
 <li><p>建立專案資料夾 </p>
 </li>
 <li><p>建立 NPM (參照 NPM 文件，記得移動到專案資料夾的目錄)</p>
@@ -517,33 +517,50 @@
 <p>按照資訊設定，產生 package.json 內容會像以下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;name&quot;: &quot;my-project&quot;,</span><br><span class="line"> &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line"> &quot;description&quot;: &quot;this is my project&quot;,</span><br><span class="line"> &quot;main&quot;: &quot;app.js&quot;,</span><br><span class="line"> &quot;repository&quot;: &#123;</span><br><span class="line">   &quot;type&quot;: &quot;git&quot;</span><br><span class="line">   &quot;url&quot;: &quot;http://github.com/npm/npm.git&quot;</span><br><span class="line"> &#125;,</span><br><span class="line"> &quot;scripts&quot;: &#123;</span><br><span class="line">   &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line"> &#125;,</span><br><span class="line"> &quot;author&quot;: &quot;&quot;,</span><br><span class="line"> &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>若想快速設定可用 <code>npm init -y</code>。設定結束後，會產生  package.json(設定紀錄檔)。</p>
-<p>建議可在 package.json 加入以下  webpack-dev-server scripts</p>
+<p>scripts 屬性可以自訂指令名稱及執行指令，設定完後，輸入<br><code>npm run 指令名稱</code> 就可以執行了。</p>
+<p>建議可在 package.json 加入以下  webpack-dev-server   scripts</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;dev&quot;: &quot;webpack-dev-server --devtool eval --progress --colors --content-base build&quot;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p>–devtool eval: 將把 source 加到我的 code<br>–progress 與 –colors： 反應現今程序執行狀況<br>–content-base build： 將 build 裡的 index.html 作為啟始頁</p>
-<p> 此 scripts</p>
-<ol start="3">
-<li><p>使用 NPM 安裝的套件，也會記錄在 package.json 內。<br>紀錄的訊息會像是：</p>
+<p>安裝 webpack 套件在專案資料夾裡：<br><code>npm install webpack webpack-cli --save-dev</code></p>
+</li>
+<li><p>用 NPM 安裝要使用的套件。安裝後的套件資訊，也會記錄在 package.json 內。 </p>
+<p>紀錄的訊息會像是：</p>
 <p>開發的時候會用到的套件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;devDependencies&quot;: &#123;</span><br><span class="line">	&quot;webpack&quot;: &quot;^4.18.0&quot;</span><br><span class="line">   &quot;babel-eslint&quot;: &quot;^10.0.1&quot;,</span><br><span class="line">   &quot;eslint&quot;: &quot;^5.16.0&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p> 上線發佈後依然需要用到的套件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">   &quot;axios&quot;: &quot;^0.19.0&quot;,</span><br><span class="line">   &quot;bootstrap&quot;: &quot;^4.3.1&quot;,</span><br><span class="line">   &quot;jquery&quot;: &quot;^3.4.1&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
-<p> package.json 可以手動加入也可自動加入。<br> 要自動加入的指令是 <code>--save-dev</code> ，在套件安裝時加上。<br> e.g.<br> <code>npm install webpack --save-dev</code><br> <code>npm install webpack-cli -dev</code></p>
+<p>   上線發佈後依然需要用到的套件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">  &quot;axios&quot;: &quot;^0.19.0&quot;,</span><br><span class="line">  &quot;bootstrap&quot;: &quot;^4.3.1&quot;,</span><br><span class="line">  &quot;jquery&quot;: &quot;^3.4.1&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<p>  package.json 可以手動加入也可自動加入。<br>  要自動加入的指令是 <code>--save-dev</code> ，在套件安裝時加上。  </p>
+<p>  e.g.<br>  <code>npm install webpack webpack-cli --save-dev</code> </p>
 <ol start="4">
 <li><p>建立 webpack.config.js 檔案<br>用來當作 webpack 的設定檔，檔名也不能亂取。<br>檔案內容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> const path = require(&apos;path&apos;);</span><br><span class="line">module.exports = &#123;</span><br><span class="line">    //webpack打包的對象， index.js</span><br><span class="line">    entry: &#123;</span><br><span class="line">        index: &apos;./index.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        //這裡是打包後的檔案名稱</span><br><span class="line">        filename: &apos;bundle.js&apos;,</span><br><span class="line">        //打包後的路徑，這裡使用 path 模組的 resolve() 取得絕對位置，也就是目前專案的根目錄</span><br><span class="line">        path: path.resolve(&apos;./&apos;),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"> ``` </span><br><span class="line"></span><br><span class="line">## 使用 loader</span><br><span class="line">告訴 webpack，什麼類型的檔案該以什麼形式去編譯打包，loader 的設定會寫在 module 的 rules 中。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> const path = require(&apos;path&apos;);</span><br><span class="line"> module.exports = &#123;</span><br><span class="line">    //webpack打包的路徑及對象， index.js</span><br><span class="line">    entry: &#123;</span><br><span class="line">        index: &apos;./index.js&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        //這裡是打包後的檔案名稱</span><br><span class="line">        filename: &apos;bundle.js&apos;,</span><br><span class="line">        //打包後的路徑，這裡使用 path 模組的 resolve() 取得絕對位置，也就是目前專案的根目錄</span><br><span class="line">        path: path.resolve(&apos;./&apos;),</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> ``` </span><br><span class="line"></span><br><span class="line">## 使用 loader</span><br><span class="line">告訴 webpack，該如何處理匯入的檔案(編譯打包)，通常是 Javascript 但 webpack 不限於處理 Javascript，其他像是 Sass，圖片等也可處理，只要提供可處理的 loader。loader 的設定會寫在 module 的 rules 中。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>module.exports = {<br>    //如果有一個以上的檔案需要打包，可以傳陣列給entry<br>    entry: [‘./index.js’, ‘./app.jsx’],<br>    output: {<br>        filename: ‘bundle.js’,<br>        path: path.resolve(__dirname, ‘./‘),<br>    },<br>    //將loader的設定寫在module的rules屬性中<br>    module: {<br>        //rules的值是一個陣列可以存放多個loader物件<br>        rules: [<br>            { test: /.jsx$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-react’] } } }<br>        ]<br>    }<br>};<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">loader 物件屬性  </span><br><span class="line">&gt;test：指定編譯檔案的副檔名為何，用正規表達式來尋找結尾處為.jsx的檔案。  </span><br><span class="line"></span><br><span class="line">&gt;exclude：指定不編譯的路徑。</span><br><span class="line">  </span><br><span class="line">&gt;use：指定用來編譯符合副檔名條件的loader，這個物件裡面還有兩個屬性：</span><br><span class="line">&gt;&gt;loader：指定進行編譯的套件  </span><br><span class="line">&gt;&gt;option：指定 loader 套件中的 presets 是什麼</span><br><span class="line"></span><br><span class="line">## 開啟本機伺服器</span><br><span class="line"></span><br><span class="line">在 webpack.config.js 中增加 devserver 的一些設定，例如要開啟的 port，如果沒有特別設定的話，port 的預設值為 8080，以下為了區隔所以設定 9000</span><br></pre></td></tr></table></figure></p>
-<p>const path = require(‘path’);<br>module.exports = {<br>    entry: [‘./index.js’, ‘./app.jsx’],<br>    output: {<br>        filename: ‘bundle.js’,<br>        path: path.resolve(__dirname, ‘./‘),<br>    },<br>    //將loader的設定寫在module的rules屬性中<br>    module: {<br>        //rules的值是一個陣列可以存放多個loader物件<br>        rules: [<br>            { test: /.jsx$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-react’, ‘@babel/preset-env’] } } },<br>            { test: /.js$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-env’] } } }<br>        ]<br>    },<br>    //增加一個給devserver的設定<br>    devServer: {<br>        //指定開啟port為9000<br>        port: 9000<br>    }<br>};<br><code>`</code></p>
+<p>module.exports = {<br>    //如果有一個以上的檔案需要打包，可以傳陣列給entry<br>    entry: [‘./index.js’, ‘./app.jsx’],<br>    output: {<br>        filename: ‘bundle.js’,<br>        path: path.resolve(__dirname, ‘./‘),<br>    },<br>    //將loader的設定寫在module的rules屬性中<br>    module: {<br>        //rules的值是一個陣列可以存放多個loader物件<br>        rules: [<br>            { test: /.jsx$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-react’] } } }<br>        ]<br>    }<br>};<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">loader 物件屬性  </span><br><span class="line">&gt;test：指定編譯檔案的副檔名為何，用正規表達式來尋找結尾處為.jsx的檔案。  </span><br><span class="line"></span><br><span class="line">&gt;exclude：指定不編譯的路徑。</span><br><span class="line">  </span><br><span class="line">&gt;use：指定用來編譯符合副檔名條件的loader，這個物件裡面還有兩個屬性：</span><br><span class="line">&gt;&gt;loader：指定進行編譯的套件  </span><br><span class="line">&gt;&gt;option：指定 loader 套件中的 presets 是什麼</span><br><span class="line"></span><br><span class="line">### 其他 loader 對應：  </span><br><span class="line"></span><br><span class="line">#### CSS</span><br><span class="line"></span><br><span class="line">CSS：style-loader、css-loader  </span><br><span class="line">SASS：sass-loader、node-sass</span><br><span class="line"></span><br><span class="line">安裝：</span><br><span class="line">`npm install --save-dev autoprefixer css-loader node-sass postcss-loader precss sass-loader style-loader`</span><br><span class="line"></span><br><span class="line">設定</span><br></pre></td></tr></table></figure></p>
+<p>// webpack.config.js</p>
+<p>module: {<br>  rules: [<br>    {<br>      test: /.scss$/,<br>      use: [‘style-loader’, ‘css-loader’, ‘sass-loader’]<br>    }<br>  ]<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用</span><br></pre></td></tr></table></figure></p>
+<p>// ./src/index.js<br>import ‘./styles/style.scss’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### pic</span><br><span class="line">file-loader、url-loader  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">`npm install --save-dev url-loader`</span><br><span class="line"></span><br><span class="line">設定</span><br></pre></td></tr></table></figure></p>
+<p>// webpack.config.js</p>
+<p>module:{<br>  rules:[<br>    // url loader (for image)<br>    {<br>      test: /.(jpe?g|png|gif|svg)$/,<br>      use: [<br>        {<br>          loader: ‘url-loader’,<br>          options: {<br>            limit: 40000  /<em> 小於 40kB 的圖片轉成 base64 </em>/<br>          }<br>        }<br>      ]<br>    }<br>  ],<br>  [<br>  // file-loader<br>      {<br>        test: /.(woff|woff2|eot|ttf|otf)$/,<br>        use: [<br>          ‘file-loader’<br>        ]<br>      }<br>   ]<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用</span><br></pre></td></tr></table></figure></p>
+<p>// ./src/image-viewer.js<br>import midImgUrl from ‘./../assets/mid.jpeg’<br>import minImgUrl from ‘./../assets/min.jpeg’</p>
+<p>// midImg 會是被壓縮過的檔案名稱<br>const midImg = document.createElement(‘img’)<br>midImg.src = midImgUrl<br>document.body.appendChild(midImg)</p>
+<p>// minImg 是被注入在 bundle.js 中，可以直接使用<br>const minImg = document.createElement(‘img’)<br>minImg.src = minImgUrl<br>document.body.appendChild(minImg)</p>
+<p>export {midImg, minImg}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### ES6 轉譯 ES5</span><br><span class="line">babel-loader、babel-core、babel-preset-env</span><br><span class="line"></span><br><span class="line">`npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader`</span><br><span class="line"></span><br><span class="line">設定</span><br></pre></td></tr></table></figure></p>
+<p>// webpack.config.js</p>
+<p>module: {<br>  rules: [<br>    // babel-loader<br>    {<br>      test: /.js$/,<br>      exclude: /(node_modules|bower_components)/,<br>      use: {<br>        loader: ‘babel-loader’,<br>        options: {<br>          presets: [<br>            [<br>              ‘@babel/preset-env’,<br>              {<br>                useBuiltIns: ‘entry’,<br>                // targets: “&gt; 0.25%, not dead”<br>                targets: {<br>                  chrome: ‘69’<br>                }<br>              }<br>            ]<br>          ] // End of presets<br>        } // End of options<br>      }<br>    } // End of Babel<br>  ];<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 開啟本機伺服器</span><br><span class="line"></span><br><span class="line">在 webpack.config.js 中增加 devserver 的一些設定，例如要開啟的 port，如果沒有特別設定的話，port 的預設值為 8080，以下為了區隔所以設定 9000</span><br></pre></td></tr></table></figure></p>
+<p>const path = require(‘path’);<br>module.exports = {<br>    entry: [‘./index.js’, ‘./app.jsx’],<br>    output: {<br>        filename: ‘bundle.js’,<br>        path: path.resolve(__dirname, ‘./‘),<br>    },<br>    //將loader的設定寫在module的rules屬性中<br>    module: {<br>        //rules的值是一個陣列可以存放多個loader物件<br>        rules: [<br>            { test: /.jsx$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-react’, ‘@babel/preset-env’] } } },<br>            { test: /.js$/, exclude: /node_modules/, use: { loader: ‘babel-loader’, options: { presets: [‘@babel/preset-env’] } } }<br>        ]<br>    },<br>    //增加一個給devserver的設定<br>    devServer: {<br>        //指定開啟port為9000<br>        port: 9000<br>    }<br>};<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Plugin</span><br><span class="line"></span><br><span class="line">透過 `clean-webpack-plugin` 可以每次打包前都清除特定資料夾。</span><br><span class="line"></span><br><span class="line">安裝</span><br><span class="line"></span><br><span class="line">`$ npm install clean-webpack-plugin --save-dev`</span><br></pre></td></tr></table></figure></p>
+<p>// webpack.config.js</p>
+<p>const path = require(‘path’)<br>const CleanWebpackPlugin = require(‘clean-webpack-plugin’)</p>
+<p>module.exports = {<br>  // …<br>  plugins: [<br>    new CleanWebpackPlugin([‘dist’]),<br>    // …<br>  ]<br>}<br><code>`</code></p>
 <h2 id="指令-命令提示字元下-or-終端機輸入"><a href="#指令-命令提示字元下-or-終端機輸入" class="headerlink" title="指令(命令提示字元下 or 終端機輸入)"></a>指令(命令提示字元下 or 終端機輸入)</h2><h3 id="看版本"><a href="#看版本" class="headerlink" title="看版本"></a>看版本</h3><p><code>webpack -v</code></p>
 <h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p><code>webpack -p</code></p>
+<p>or</p>
+<p><code>npm run start</code></p>
 <h3 id="開啟本機伺服器"><a href="#開啟本機伺服器" class="headerlink" title="開啟本機伺服器"></a>開啟本機伺服器</h3><p><code>webpack-dev-server</code></p>
 <p>執行完後，打開瀏覽器輸入 <a href="http://localhost:9000" target="_blank" rel="noopener">http://localhost:9000</a> ，關閉 <code>webpack-dev-server</code> 開啟的 port，在命令提示字元的畫面上輸入 Ctrl+C。</p>
-<p>參考：<br><a href="https://webpack.js.org/concepts/#entry" target="_blank" rel="noopener">https://webpack.js.org/concepts/#entry</a><br><a href="https://ithelp.ithome.com.tw/articles/10200329" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10200329</a><br><a href="https://ithelp.ithome.com.tw/articles/10200459?sc=pt" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10200459?sc=pt</a></p>
+<p>參考：<br><a href="https://webpack.js.org/concepts/#entry" target="_blank" rel="noopener">https://webpack.js.org/concepts/#entry</a><br><a href="https://ithelp.ithome.com.tw/articles/10200329" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10200329</a><br><a href="https://ithelp.ithome.com.tw/articles/10200459?sc=pt" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10200459?sc=pt</a><br><a href="https://pjchender.github.io/2018/05/17/webpack-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98%EF%BC%88webpack-note%EF%BC%89/" target="_blank" rel="noopener">Webpack 學習筆記（Webpack Note）</a></p>
 
       
     </div>
@@ -819,7 +836,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack"><span class="nav-number">1.</span> <span class="nav-text">webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝"><span class="nav-number">1.1.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令-命令提示字元下-or-終端機輸入"><span class="nav-number">1.3.</span> <span class="nav-text">指令(命令提示字元下 or 終端機輸入)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看版本"><span class="nav-number">1.3.1.</span> <span class="nav-text">看版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包"><span class="nav-number">1.3.2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#開啟本機伺服器"><span class="nav-number">1.3.3.</span> <span class="nav-text">開啟本機伺服器</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack"><span class="nav-number">1.</span> <span class="nav-text">webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝"><span class="nav-number">1.1.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#專案使用"><span class="nav-number">1.2.</span> <span class="nav-text">專案使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令-命令提示字元下-or-終端機輸入"><span class="nav-number">1.3.</span> <span class="nav-text">指令(命令提示字元下 or 終端機輸入)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看版本"><span class="nav-number">1.3.1.</span> <span class="nav-text">看版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包"><span class="nav-number">1.3.2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#開啟本機伺服器"><span class="nav-number">1.3.3.</span> <span class="nav-text">開啟本機伺服器</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -852,7 +869,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="總字數">45k</span>
+    <span title="總字數">47k</span>
   
 
   
@@ -861,7 +878,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="所需總閱讀時間">1:15</span>
+    <span title="所需總閱讀時間">1:18</span>
   
 </div>
 
