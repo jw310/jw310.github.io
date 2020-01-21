@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jw310.github.io/2019/12/15/AJAX-base/</loc>
+    
+    <lastmod>2020-01-21T07:40:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jw310.github.io/2020/01/16/webpack-base/</loc>
     
     <lastmod>2020-01-17T07:01:21.000Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://jw310.github.io/2019/12/13/RWD-base/</loc>
     
     <lastmod>2019-12-16T03:40:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jw310.github.io/2019/12/15/AJAX-base/</loc>
-    
-    <lastmod>2019-12-15T10:45:17.000Z</lastmod>
     
   </url>
   

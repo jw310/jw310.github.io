@@ -1,501 +1,75 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-TW">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-
-
-
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
-
-  <meta name="description" content="HTML 基本介紹超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而">
-<meta name="keywords" content="HTML">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML 基本介紹">
-<meta property="og:url" content="https://jw310.github.io/2020/01/15/HTML-base/index.html">
-<meta property="og:site_name" content="Jw的學習大小事">
-<meta property="og:description" content="HTML 基本介紹超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而">
-<meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://jw310.github.io/2020/01/15/HTML-base/HTML5.png">
-<meta property="og:updated_time" content="2020-01-15T06:00:46.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML 基本介紹">
-<meta name="twitter:description" content="HTML 基本介紹超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而">
-<meta name="twitter:image" content="https://jw310.github.io/2020/01/15/HTML-base/HTML5.png">
-
-
-
-
-
-  
-  
-  <link rel="canonical" href="https://jw310.github.io/2020/01/15/HTML-base/">
-
-
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>HTML 基本介紹 | Jw的學習大小事</title>
-  
-
-
-
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140888842-1 //UAID追蹤碼"></script>
-  <script>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-140888842-1 //UAID追蹤碼');
-    }
-  </script>
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>HTML 基本介紹 | Jw的學習大小事</title><meta name="description" content="HTML 基本介紹"><meta name="keywords" content="HTML"><meta name="author" content="jerry wu"><meta name="copyright" content="jerry wu"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="HTML 基本介紹"><meta name="twitter:description" content="HTML 基本介紹"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta property="og:type" content="article"><meta property="og:title" content="HTML 基本介紹"><meta property="og:url" content="https://jw310.github.io/2020/01/15/HTML-base/"><meta property="og:site_name" content="Jw的學習大小事"><meta property="og:description" content="HTML 基本介紹"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
   }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
-
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://jw310.github.io/2020/01/15/HTML-base/"><link rel="prev" title="Sass 基本介紹" href="https://jw310.github.io/2020/01/16/Sass-base/"><link rel="next" title="記錄一下 AJAX 操作的幾個方法" href="https://jw310.github.io/2019/12/15/AJAX-base/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
   
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jw的學習大小事</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-    
-    
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切換導航欄">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>關於</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>標籤</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分類</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
-
-  </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜尋</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜尋..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
-
-  
-
-
-
-</div>
-    </header>
-
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-            
-
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jw310.github.io/2020/01/15/HTML-base/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jerry wu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jw的學習大小事">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">HTML 基本介紹
-
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2020-01-15 10:56:00 / 修改時間：14:00:46" itemprop="dateCreated datePublished" datetime="2020-01-15T10:56:00+08:00">2020-01-15</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-
-          
-
-          <br>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-              <span title="文章字數">6.2k</span>
-            </span>
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-              <span title="所需閱讀時間">10 分鐘</span>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="HTML-基本介紹"><a href="#HTML-基本介紹" class="headerlink" title="HTML 基本介紹"></a>HTML 基本介紹</h2><h5 id="超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。"><a href="#超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。" class="headerlink" title="超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。"></a>超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。</h5><h2 id="標籤元素"><a href="#標籤元素" class="headerlink" title="標籤元素"></a>標籤元素</h2><p>使用標籤元素來呈現網頁內容，通常為 “區塊級” 或是 “行內”。瀏覽器預設以在元素前後換行(另起一行)的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。行內元素是與鄰近元素保持在同一行。  </p>
+}</script></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Jw的學習大小事</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目錄</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#HTML-基本介紹"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">HTML 基本介紹</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。"><span class="toc_mobile_items-number">1.0.0.1.</span> <span class="toc_mobile_items-text">超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。</span></a></li></ol></li></ol><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#標籤元素"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">標籤元素</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#標籤種類"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">標籤種類</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#網頁頁面資訊"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">網頁頁面資訊</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#版本宣告-HTML5"><span class="toc_mobile_items-number">3.1.1.</span> <span class="toc_mobile_items-text">版本宣告(HTML5)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#網頁語系"><span class="toc_mobile_items-number">3.1.2.</span> <span class="toc_mobile_items-text">網頁語系</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#網頁資訊"><span class="toc_mobile_items-number">3.1.3.</span> <span class="toc_mobile_items-text">網頁資訊</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#瀏覽器頂端或該頁面標題列"><span class="toc_mobile_items-number">3.1.4.</span> <span class="toc_mobile_items-text">瀏覽器頂端或該頁面標題列</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#連結外部資源"><span class="toc_mobile_items-number">3.1.5.</span> <span class="toc_mobile_items-text">連結外部資源</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#script-外部引用"><span class="toc_mobile_items-number">3.1.6.</span> <span class="toc_mobile_items-text">script 外部引用</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#網頁內容標籤"><span class="toc_mobile_items-number">3.2.</span> <span class="toc_mobile_items-text">網頁內容標籤</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#body-標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用-CSS-處理。"><span class="toc_mobile_items-number">3.2.1.</span> <span class="toc_mobile_items-text">body 標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用 CSS 處理。</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#div-區塊標籤，可當做無語意的-lt-header-gt-、-lt-article-gt-，無明顯含義的區塊或為了排版目的"><span class="toc_mobile_items-number">3.2.2.</span> <span class="toc_mobile_items-text">div 區塊標籤，可當做無語意的 &lt;header&gt;、&lt;article&gt;，無明顯含義的區塊或為了排版目的</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#span-行內標籤，可當做無語意的-lt-strong-gt-、-lt-em-gt-。將文字與元素群組組在行內中。"><span class="toc_mobile_items-number">3.2.3.</span> <span class="toc_mobile_items-text">span 行內標籤，可當做無語意的 &lt;strong&gt;、&lt;em&gt;。將文字與元素群組組在行內中。</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#樣式標籤，使用-css-樣式-內部宣告用-。"><span class="toc_mobile_items-number">3.2.4.</span> <span class="toc_mobile_items-text">樣式標籤，使用 css 樣式(內部宣告用)。</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#語意標籤"><span class="toc_mobile_items-number">3.3.</span> <span class="toc_mobile_items-text">語意標籤</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#HTML5-語意標籤-大多是區塊標籤"><span class="toc_mobile_items-number">3.3.1.</span> <span class="toc_mobile_items-text">HTML5 語意標籤(大多是區塊標籤)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#空白："><span class="toc_mobile_items-number">3.3.2.</span> <span class="toc_mobile_items-text">空白：</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#標題-區塊標籤"><span class="toc_mobile_items-number">3.3.3.</span> <span class="toc_mobile_items-text">標題  //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#段落-區塊標籤"><span class="toc_mobile_items-number">3.3.4.</span> <span class="toc_mobile_items-text">段落  //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#粗體"><span class="toc_mobile_items-number">3.3.5.</span> <span class="toc_mobile_items-text">粗體</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#斜體"><span class="toc_mobile_items-number">3.3.6.</span> <span class="toc_mobile_items-text">斜體</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#上標"><span class="toc_mobile_items-number">3.3.7.</span> <span class="toc_mobile_items-text">上標</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#下標"><span class="toc_mobile_items-number">3.3.8.</span> <span class="toc_mobile_items-text">下標</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#斷行"><span class="toc_mobile_items-number">3.3.9.</span> <span class="toc_mobile_items-text">斷行</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#水平線-區塊標籤"><span class="toc_mobile_items-number">3.3.10.</span> <span class="toc_mobile_items-text">水平線  //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#加強，通常標記為重要"><span class="toc_mobile_items-number">3.3.11.</span> <span class="toc_mobile_items-text">加強，通常標記為重要</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#斜體，強調元素內容"><span class="toc_mobile_items-number">3.3.12.</span> <span class="toc_mobile_items-text">斜體，強調元素內容</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#編號清單-區塊標籤"><span class="toc_mobile_items-number">3.3.13.</span> <span class="toc_mobile_items-text">編號清單  //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#項目清單-區塊標籤"><span class="toc_mobile_items-number">3.3.14.</span> <span class="toc_mobile_items-text">項目清單  //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#定義清單-區塊標籤"><span class="toc_mobile_items-number">3.3.15.</span> <span class="toc_mobile_items-text">定義清單   //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#巢狀清單"><span class="toc_mobile_items-number">3.3.16.</span> <span class="toc_mobile_items-text">巢狀清單</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#將內容縮排，通常作為引述-區塊標籤"><span class="toc_mobile_items-number">3.3.17.</span> <span class="toc_mobile_items-text">將內容縮排，通常作為引述   區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#引號"><span class="toc_mobile_items-number">3.3.18.</span> <span class="toc_mobile_items-text">引號</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#縮寫及縮略字"><span class="toc_mobile_items-number">3.3.19.</span> <span class="toc_mobile_items-text">縮寫及縮略字</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#email-or-地址-區塊標籤"><span class="toc_mobile_items-number">3.3.20.</span> <span class="toc_mobile_items-text">email or 地址    //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#插入字，會加上底線"><span class="toc_mobile_items-number">3.3.21.</span> <span class="toc_mobile_items-text">插入字，會加上底線</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#刪節線，元素內容會加上刪節線"><span class="toc_mobile_items-number">3.3.22.</span> <span class="toc_mobile_items-text">刪節線，元素內容會加上刪節線</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#元素內容加上刪節線，標示不正確但不刪除的內容"><span class="toc_mobile_items-number">3.3.23.</span> <span class="toc_mobile_items-text">元素內容加上刪節線，標示不正確但不刪除的內容</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#畫-canvas-區塊標籤"><span class="toc_mobile_items-number">3.3.24.</span> <span class="toc_mobile_items-text">畫 canvas     //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#置中，標籤內元素會置中"><span class="toc_mobile_items-number">3.3.25.</span> <span class="toc_mobile_items-text">置中，標籤內元素會置中</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#顯示標籤內資料的原始格式"><span class="toc_mobile_items-number">3.3.26.</span> <span class="toc_mobile_items-text">顯示標籤內資料的原始格式</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#旁註標記"><span class="toc_mobile_items-number">3.3.27.</span> <span class="toc_mobile_items-text">旁註標記</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#插入圖片"><span class="toc_mobile_items-number">3.3.28.</span> <span class="toc_mobile_items-text">插入圖片</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#超連結"><span class="toc_mobile_items-number">3.3.29.</span> <span class="toc_mobile_items-text">超連結</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#音訊"><span class="toc_mobile_items-number">3.3.30.</span> <span class="toc_mobile_items-text">音訊</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#播放視訊-HTML5-區塊標籤"><span class="toc_mobile_items-number">3.3.31.</span> <span class="toc_mobile_items-text">播放視訊(HTML5) //區塊標籤</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。"><span class="toc_mobile_items-number">3.3.32.</span> <span class="toc_mobile_items-text">表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#表單"><span class="toc_mobile_items-number">3.3.33.</span> <span class="toc_mobile_items-text">表單</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#label-協助使用者在點選到該標籤時，可以透過-for-的屬性值，去連動具有相同-id-屬性值的標籤。或是直接將-lt-input-gt-元素包圍起來。"><span class="toc_mobile_items-number">3.3.34.</span> <span class="toc_mobile_items-text">label 協助使用者在點選到該標籤時，可以透過 for 的屬性值，去連動具有相同 id 屬性值的標籤。或是直接將 &lt;input&gt; 元素包圍起來。</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#按鈕-可添加圖片"><span class="toc_mobile_items-number">3.3.35.</span> <span class="toc_mobile_items-text">按鈕(可添加圖片)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#iframe-顯示別的-url-的網頁內容在本身網頁的某區塊上"><span class="toc_mobile_items-number">3.3.36.</span> <span class="toc_mobile_items-text">iframe 顯示別的 url 的網頁內容在本身網頁的某區塊上</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#註解"><span class="toc_mobile_items-number">3.3.37.</span> <span class="toc_mobile_items-text">註解</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#符號顯示"><span class="toc_mobile_items-number">3.3.38.</span> <span class="toc_mobile_items-text">符號顯示</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#補充"><span class="toc_mobile_items-number">3.3.39.</span> <span class="toc_mobile_items-text">補充</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#簡單網頁範例："><span class="toc_mobile_items-number">3.4.</span> <span class="toc_mobile_items-text">簡單網頁範例：</span></a></li></ol></li></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-基本介紹"><span class="toc-number">1.</span> <span class="toc-text">HTML 基本介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#標籤元素"><span class="toc-number">2.</span> <span class="toc-text">標籤元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#標籤種類"><span class="toc-number">3.</span> <span class="toc-text">標籤種類</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#網頁頁面資訊"><span class="toc-number">3.1.</span> <span class="toc-text">網頁頁面資訊</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#版本宣告-HTML5"><span class="toc-number">3.1.1.</span> <span class="toc-text">版本宣告(HTML5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#網頁語系"><span class="toc-number">3.1.2.</span> <span class="toc-text">網頁語系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#網頁資訊"><span class="toc-number">3.1.3.</span> <span class="toc-text">網頁資訊</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#瀏覽器頂端或該頁面標題列"><span class="toc-number">3.1.4.</span> <span class="toc-text">瀏覽器頂端或該頁面標題列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#連結外部資源"><span class="toc-number">3.1.5.</span> <span class="toc-text">連結外部資源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#script-外部引用"><span class="toc-number">3.1.6.</span> <span class="toc-text">script 外部引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#網頁內容標籤"><span class="toc-number">3.2.</span> <span class="toc-text">網頁內容標籤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#body-標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用-CSS-處理。"><span class="toc-number">3.2.1.</span> <span class="toc-text">body 標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用 CSS 處理。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#div-區塊標籤，可當做無語意的-lt-header-gt-、-lt-article-gt-，無明顯含義的區塊或為了排版目的"><span class="toc-number">3.2.2.</span> <span class="toc-text">div 區塊標籤，可當做無語意的 &lt;header&gt;、&lt;article&gt;，無明顯含義的區塊或為了排版目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#span-行內標籤，可當做無語意的-lt-strong-gt-、-lt-em-gt-。將文字與元素群組組在行內中。"><span class="toc-number">3.2.3.</span> <span class="toc-text">span 行內標籤，可當做無語意的 &lt;strong&gt;、&lt;em&gt;。將文字與元素群組組在行內中。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#樣式標籤，使用-css-樣式-內部宣告用-。"><span class="toc-number">3.2.4.</span> <span class="toc-text">樣式標籤，使用 css 樣式(內部宣告用)。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#語意標籤"><span class="toc-number">3.3.</span> <span class="toc-text">語意標籤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML5-語意標籤-大多是區塊標籤"><span class="toc-number">3.3.1.</span> <span class="toc-text">HTML5 語意標籤(大多是區塊標籤)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#空白："><span class="toc-number">3.3.2.</span> <span class="toc-text">空白：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#標題-區塊標籤"><span class="toc-number">3.3.3.</span> <span class="toc-text">標題  //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#段落-區塊標籤"><span class="toc-number">3.3.4.</span> <span class="toc-text">段落  //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#粗體"><span class="toc-number">3.3.5.</span> <span class="toc-text">粗體</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#斜體"><span class="toc-number">3.3.6.</span> <span class="toc-text">斜體</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上標"><span class="toc-number">3.3.7.</span> <span class="toc-text">上標</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下標"><span class="toc-number">3.3.8.</span> <span class="toc-text">下標</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#斷行"><span class="toc-number">3.3.9.</span> <span class="toc-text">斷行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#水平線-區塊標籤"><span class="toc-number">3.3.10.</span> <span class="toc-text">水平線  //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#加強，通常標記為重要"><span class="toc-number">3.3.11.</span> <span class="toc-text">加強，通常標記為重要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#斜體，強調元素內容"><span class="toc-number">3.3.12.</span> <span class="toc-text">斜體，強調元素內容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#編號清單-區塊標籤"><span class="toc-number">3.3.13.</span> <span class="toc-text">編號清單  //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#項目清單-區塊標籤"><span class="toc-number">3.3.14.</span> <span class="toc-text">項目清單  //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定義清單-區塊標籤"><span class="toc-number">3.3.15.</span> <span class="toc-text">定義清單   //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#巢狀清單"><span class="toc-number">3.3.16.</span> <span class="toc-text">巢狀清單</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#將內容縮排，通常作為引述-區塊標籤"><span class="toc-number">3.3.17.</span> <span class="toc-text">將內容縮排，通常作為引述   區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引號"><span class="toc-number">3.3.18.</span> <span class="toc-text">引號</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#縮寫及縮略字"><span class="toc-number">3.3.19.</span> <span class="toc-text">縮寫及縮略字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#email-or-地址-區塊標籤"><span class="toc-number">3.3.20.</span> <span class="toc-text">email or 地址    //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入字，會加上底線"><span class="toc-number">3.3.21.</span> <span class="toc-text">插入字，會加上底線</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#刪節線，元素內容會加上刪節線"><span class="toc-number">3.3.22.</span> <span class="toc-text">刪節線，元素內容會加上刪節線</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#元素內容加上刪節線，標示不正確但不刪除的內容"><span class="toc-number">3.3.23.</span> <span class="toc-text">元素內容加上刪節線，標示不正確但不刪除的內容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#畫-canvas-區塊標籤"><span class="toc-number">3.3.24.</span> <span class="toc-text">畫 canvas     //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#置中，標籤內元素會置中"><span class="toc-number">3.3.25.</span> <span class="toc-text">置中，標籤內元素會置中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#顯示標籤內資料的原始格式"><span class="toc-number">3.3.26.</span> <span class="toc-text">顯示標籤內資料的原始格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#旁註標記"><span class="toc-number">3.3.27.</span> <span class="toc-text">旁註標記</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入圖片"><span class="toc-number">3.3.28.</span> <span class="toc-text">插入圖片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#超連結"><span class="toc-number">3.3.29.</span> <span class="toc-text">超連結</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#音訊"><span class="toc-number">3.3.30.</span> <span class="toc-text">音訊</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#播放視訊-HTML5-區塊標籤"><span class="toc-number">3.3.31.</span> <span class="toc-text">播放視訊(HTML5) //區塊標籤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。"><span class="toc-number">3.3.32.</span> <span class="toc-text">表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#表單"><span class="toc-number">3.3.33.</span> <span class="toc-text">表單</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#label-協助使用者在點選到該標籤時，可以透過-for-的屬性值，去連動具有相同-id-屬性值的標籤。或是直接將-lt-input-gt-元素包圍起來。"><span class="toc-number">3.3.34.</span> <span class="toc-text">label 協助使用者在點選到該標籤時，可以透過 for 的屬性值，去連動具有相同 id 屬性值的標籤。或是直接將 &lt;input&gt; 元素包圍起來。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#按鈕-可添加圖片"><span class="toc-number">3.3.35.</span> <span class="toc-text">按鈕(可添加圖片)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#iframe-顯示別的-url-的網頁內容在本身網頁的某區塊上"><span class="toc-number">3.3.36.</span> <span class="toc-text">iframe 顯示別的 url 的網頁內容在本身網頁的某區塊上</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#註解"><span class="toc-number">3.3.37.</span> <span class="toc-text">註解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#符號顯示"><span class="toc-number">3.3.38.</span> <span class="toc-text">符號顯示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#補充"><span class="toc-number">3.3.39.</span> <span class="toc-text">補充</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#簡單網頁範例："><span class="toc-number">3.4.</span> <span class="toc-text">簡單網頁範例：</span></a></li></ol></li></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png)"><div id="post-info"><div id="post-title"><div class="posttitle">HTML 基本介紹</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 發表於 2020-01-15<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新於 2020-01-15</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/HTML/">HTML</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon fa-fw" aria-hidden="true"></i><span>字數總計:</span><span class="word-count">4.3k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon fa-fw" aria-hidden="true"></i><span>閲讀時長: 19 分鐘</span><div class="post-meta-pv-cv"><span class="post-meta__separator">|</span><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>閲讀量:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h2 id="HTML-基本介紹"><a href="#HTML-基本介紹" class="headerlink" title="HTML 基本介紹"></a>HTML 基本介紹</h2><h5 id="超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。"><a href="#超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。" class="headerlink" title="超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。"></a>超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。</h5><h2 id="標籤元素"><a href="#標籤元素" class="headerlink" title="標籤元素"></a>標籤元素</h2><p>使用標籤元素來呈現網頁內容，通常為 “區塊級” 或是 “行內”。瀏覽器預設以在元素前後換行(另起一行)的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。行內元素是與鄰近元素保持在同一行。  </p>
 <p>元素組成可以加入屬性及屬性值，可以同時有多種屬性及值，每個標籤都可以有 id 及 class 屬性。</p>
 <p>id=”名稱”：識別單一元素用，可利用 id 來跟特定元素互動，名稱不能相同。<br>class=”名稱”：識別同類別元素，可利用 class 來跟同類別元素互動，多元素可以同一個 class 類別。</p>
 <p>屬性也可以自訂，使用方式為 <code>date-*</code> 。</p>
@@ -525,25 +99,25 @@
 <p>rel=”stylesheet”：連結樣式。<br>type=”text/css”：連接類型。(不一定要加上)<br>href=”URL”：連結位置。<br>crossorigin＝”anonymous”：屬性是否使用CORS(不一定要加)，anonymous：發起跨域請求，但不發送認證訊息。  </p>
 </blockquote>
 <p>e.g.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="script-外部引用"><a href="#script-外部引用" class="headerlink" title="script 外部引用"></a>script 外部引用</h4><p><code>&lt;script src=&quot;/path/to/your.js&quot;&gt;&lt;/script&gt;</code><br>ps. 另外可加上 async 、 defer 屬性(必須搭配 src)。</p>
 <blockquote>
 <p>async：下載後會先執行，但執行此 js 同時也繼續載入頁面及執行其他 js。<br>defer：要整個頁面都下載及分析完成後才會執行，非常類似於把 js 放在頁尾的情況。<br>integrity: 驗證完整性。</p>
 </blockquote>
 <p>e.g.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.8/js/solid.js&quot; integrity=&quot;sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer src=&quot;https://use.fontawesome.com/releases/v5.0.8/js/solid.js&quot; integrity=&quot;sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
 <h3 id="網頁內容標籤"><a href="#網頁內容標籤" class="headerlink" title="網頁內容標籤"></a>網頁內容標籤</h3><h4 id="body-標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用-CSS-處理。"><a href="#body-標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用-CSS-處理。" class="headerlink" title="body 標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用 CSS 處理。"></a>body 標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用 CSS 處理。</h4><p><code>&lt;body&gt;&lt;/body&gt;</code></p>
 <h4 id="div-區塊標籤，可當做無語意的-lt-header-gt-、-lt-article-gt-，無明顯含義的區塊或為了排版目的"><a href="#div-區塊標籤，可當做無語意的-lt-header-gt-、-lt-article-gt-，無明顯含義的區塊或為了排版目的" class="headerlink" title="div 區塊標籤，可當做無語意的 &lt;header&gt;、&lt;article&gt;，無明顯含義的區塊或為了排版目的"></a>div 區塊標籤，可當做無語意的 <code>&lt;header&gt;</code>、<code>&lt;article&gt;</code>，無明顯含義的區塊或為了排版目的</h4><p><code>&lt;div&gt;&lt;/div&gt;</code>  </p>
 <h4 id="span-行內標籤，可當做無語意的-lt-strong-gt-、-lt-em-gt-。將文字與元素群組組在行內中。"><a href="#span-行內標籤，可當做無語意的-lt-strong-gt-、-lt-em-gt-。將文字與元素群組組在行內中。" class="headerlink" title="span 行內標籤，可當做無語意的 &lt;strong&gt;、&lt;em&gt;。將文字與元素群組組在行內中。"></a>span 行內標籤，可當做無語意的 <code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>。將文字與元素群組組在行內中。</h4><p><code>&lt;span&gt;&lt;/span&gt;</code></p>
 <h4 id="樣式標籤，使用-css-樣式-內部宣告用-。"><a href="#樣式標籤，使用-css-樣式-內部宣告用-。" class="headerlink" title="樣式標籤，使用 css 樣式(內部宣告用)。"></a>樣式標籤，使用 css 樣式(內部宣告用)。</h4><p><code>&lt;style type=&quot;text/css&quot;&gt;&lt;/style&gt;</code></p>
 <h3 id="語意標籤"><a href="#語意標籤" class="headerlink" title="語意標籤"></a>語意標籤</h3><p>用來排版及了解網頁區塊的設計目的，語意標籤和 <code>&lt;div&gt;</code>、<code>&lt;span&gt;</code> 在排版上具有完全一樣的特性，雖可用 <code>&lt;div&gt;</code>、<code>&lt;span&gt;</code> 來快速排版，但最好用以下語意標籤來替代。使用 HTML5 語意化標籤的優點有可以快速抓到網頁架構和每個區塊的位置，對於 SEO 優化有幫助。</p>
 <h4 id="HTML5-語意標籤-大多是區塊標籤"><a href="#HTML5-語意標籤-大多是區塊標籤" class="headerlink" title="HTML5 語意標籤(大多是區塊標籤)"></a>HTML5 語意標籤(大多是區塊標籤)</h4><p><code>&lt;header&gt;</code>：網頁的標頭，通常放置網站標題。<br><code>&lt;nav&gt;</code>：網頁的選單、導覽。<br><code>&lt;main&gt;</code>：網頁的主要內容。<br><code>&lt;aside&gt;</code>：網頁的側欄、附加內容。<br><code>&lt;article&gt;</code>：一篇文章內容。<br><code>&lt;section&gt;</code>：自訂的區塊，例如數篇摘要組成的空間。<br><code>&lt;footer&gt;</code>：網頁的頁尾，通常放置聯絡方式、著作權宣告等等。<br><code>&lt;mark&gt;</code>：強調一小塊內容。<br><code>&lt;time&gt;</code>：顯示日期時間。  //不是區塊<br><code>&lt;mark&gt;</code>：如黃色螢光筆的方式畫出重點，強調內容。 //不是區塊<br><code>&lt;details&gt;</code>：描述文章的細節。  //不是區塊<br><code>&lt;figure&gt;</code>、<code>&lt;figcaption&gt;</code>：<code>&lt;figure&gt;</code>用於圖像，<code>&lt;figcaption&gt;</code>用於圖像標題。<br><code>&lt;hgroup&gt;</code>：當內容有主標題及次標題等多個標題的狀況下使用。<br><code>&lt;cite&gt;</code>：引用其他文獻或作品(例如書籍、歌曲、電影、繪畫、雕塑等）的標題。  ps.也可當做屬性用   //不是區塊  </p>
-<img src="/2020/01/15/HTML-base/HTML5.png" title="This is an image">
+<a href="/2020/01/15/HTML-base/HTML5.png" data-fancybox="group" data-caption="undefined" class="fancybox"><img src="/2020/01/15/HTML-base/HTML5.png" title="This is an image"></a>
 <p>e.g.</p>
 <p>首先是使用 <code>&lt;div&gt;</code> 可能的網頁結構，除了基本元素之外，主內容展示一篇文章和側欄，頁尾則顯示網頁最後更新的時間：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;nav&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;main&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;article&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;footer&quot;&gt;</span><br><span class="line">    Updated on &lt;span class=&quot;time&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;header&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;nav&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;main&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;article&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;aside&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;footer&quot;&gt;</span><br><span class="line">    Updated on &lt;span class=&quot;time&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
 <p>接著改用語意標籤，語意標籤和 <code>&lt;div&gt;</code>、<code>&lt;span&gt;</code> 一樣，沒有預設樣式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;&lt;/header&gt;</span><br><span class="line">&lt;nav&gt;&lt;/nav&gt;</span><br><span class="line">&lt;main&gt;</span><br><span class="line">    &lt;article&gt;&lt;/article&gt;</span><br><span class="line">    &lt;aside&gt;&lt;/aside&gt;</span><br><span class="line">&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">    Updated on &lt;time&gt;&lt;/time&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;&lt;/header&gt;</span><br><span class="line">&lt;nav&gt;&lt;/nav&gt;</span><br><span class="line">&lt;main&gt;</span><br><span class="line">    &lt;article&gt;&lt;/article&gt;</span><br><span class="line">    &lt;aside&gt;&lt;/aside&gt;</span><br><span class="line">&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">    Updated on &lt;time&gt;&lt;/time&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="空白："><a href="#空白：" class="headerlink" title="空白："></a>空白：</h4><p>原始碼可用空白字元來排版，因為瀏覽器有空白壓縮功能，<br>兩個或以上的空白字元，瀏覽器畫面上只會顯示一個空白，<br>原始碼內的斷行也視為單一空白字元。</p>
 <h4 id="標題-區塊標籤"><a href="#標題-區塊標籤" class="headerlink" title="標題  //區塊標籤"></a>標題  //區塊標籤</h4><p><code>&lt;h1&gt;&lt;/h1&gt;</code> ~ <code>&lt;h6&gt;&lt;/h6&gt;</code></p>
 <h4 id="段落-區塊標籤"><a href="#段落-區塊標籤" class="headerlink" title="段落  //區塊標籤"></a>段落  //區塊標籤</h4><p><code>&lt;p&gt;&lt;/p&gt;</code></p>
@@ -555,10 +129,10 @@
 <h4 id="水平線-區塊標籤"><a href="#水平線-區塊標籤" class="headerlink" title="水平線  //區塊標籤"></a>水平線  //區塊標籤</h4><p><code>&lt;hr&gt;</code></p>
 <h4 id="加強，通常標記為重要"><a href="#加強，通常標記為重要" class="headerlink" title="加強，通常標記為重要"></a>加強，通常標記為重要</h4><p><code>&lt;strong&gt;&lt;/strong&gt;</code></p>
 <h4 id="斜體，強調元素內容"><a href="#斜體，強調元素內容" class="headerlink" title="斜體，強調元素內容"></a>斜體，強調元素內容</h4><p><code>&lt;em&gt;&lt;/em&gt;</code></p>
-<h4 id="編號清單-區塊標籤"><a href="#編號清單-區塊標籤" class="headerlink" title="編號清單  //區塊標籤"></a>編號清單  //區塊標籤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;      </span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="項目清單-區塊標籤"><a href="#項目清單-區塊標籤" class="headerlink" title="項目清單  //區塊標籤"></a>項目清單  //區塊標籤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="定義清單-區塊標籤"><a href="#定義清單-區塊標籤" class="headerlink" title="定義清單   //區塊標籤"></a>定義清單   //區塊標籤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;     </span><br><span class="line">  &lt;dt&gt;a&lt;/dt&gt;     //被定義名詞</span><br><span class="line">  &lt;dd&gt;bb&lt;/dd&gt;    // 定義</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="巢狀清單"><a href="#巢狀清單" class="headerlink" title="巢狀清單"></a>巢狀清單</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;           </span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">       &lt;ul&gt;      </span><br><span class="line">         &lt;li&gt;cc&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;dd&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="編號清單-區塊標籤"><a href="#編號清單-區塊標籤" class="headerlink" title="編號清單  //區塊標籤"></a>編號清單  //區塊標籤</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;      </span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></div>
+<h4 id="項目清單-區塊標籤"><a href="#項目清單-區塊標籤" class="headerlink" title="項目清單  //區塊標籤"></a>項目清單  //區塊標籤</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
+<h4 id="定義清單-區塊標籤"><a href="#定義清單-區塊標籤" class="headerlink" title="定義清單   //區塊標籤"></a>定義清單   //區塊標籤</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;     </span><br><span class="line">  &lt;dt&gt;a&lt;/dt&gt;     //被定義名詞</span><br><span class="line">  &lt;dd&gt;bb&lt;/dd&gt;    // 定義</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
+<h4 id="巢狀清單"><a href="#巢狀清單" class="headerlink" title="巢狀清單"></a>巢狀清單</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;           </span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">       &lt;ul&gt;      </span><br><span class="line">         &lt;li&gt;cc&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;dd&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">  &lt;li&gt;a&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="將內容縮排，通常作為引述-區塊標籤"><a href="#將內容縮排，通常作為引述-區塊標籤" class="headerlink" title="將內容縮排，通常作為引述   區塊標籤"></a>將內容縮排，通常作為引述   區塊標籤</h4><p><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></p>
 <h4 id="引號"><a href="#引號" class="headerlink" title="引號"></a>引號</h4><p><code>&lt;q&gt;&lt;/q&gt;</code></p>
 <p>ps.<code>&lt;blockquote&gt;</code>及<code>&lt;q&gt;</code>通常會加上 cite=”url” 屬性標明來源。</p>
@@ -571,10 +145,10 @@
 <h4 id="畫-canvas-區塊標籤"><a href="#畫-canvas-區塊標籤" class="headerlink" title="畫 canvas     //區塊標籤"></a>畫 canvas     //區塊標籤</h4><p><code>&lt;canvas&gt;&lt;/canvas&gt;</code></p>
 <h4 id="置中，標籤內元素會置中"><a href="#置中，標籤內元素會置中" class="headerlink" title="置中，標籤內元素會置中"></a>置中，標籤內元素會置中</h4><p><code>&lt;center&gt;&lt;/center&gt;</code></p>
 <h4 id="顯示標籤內資料的原始格式"><a href="#顯示標籤內資料的原始格式" class="headerlink" title="顯示標籤內資料的原始格式"></a>顯示標籤內資料的原始格式</h4><p><code>&lt;pre&gt;&lt;/pre&gt;</code></p>
-<h4 id="旁註標記"><a href="#旁註標記" class="headerlink" title="旁註標記"></a>旁註標記</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ruby&gt;</span><br><span class="line"> 漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;  漢 字的上面會標示 ㄏㄢˋ</span><br><span class="line"> 漢 &lt;rr&gt; ㄏㄢˋ &lt;/rr&gt;  漢 字的旁邊會標示 ㄏㄢˋ</span><br><span class="line">&lt;/ruby&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="旁註標記"><a href="#旁註標記" class="headerlink" title="旁註標記"></a>旁註標記</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ruby&gt;</span><br><span class="line"> 漢 &lt;rt&gt; ㄏㄢˋ &lt;/rt&gt;  漢 字的上面會標示 ㄏㄢˋ</span><br><span class="line"> 漢 &lt;rr&gt; ㄏㄢˋ &lt;/rr&gt;  漢 字的旁邊會標示 ㄏㄢˋ</span><br><span class="line">&lt;/ruby&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="插入圖片"><a href="#插入圖片" class="headerlink" title="插入圖片"></a>插入圖片</h4><p><code>&lt;img src=&quot;圖片位置&quot; alt=&quot;沒有圖片時的替代文字&quot; title=&quot;圖片資訊&quot;&gt;</code></p>
 <p>HTML5 用法  可放置一張以上的圖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;  </span><br><span class="line">&lt;img src=&quot;圖片位置&quot; alt=&quot;沒有圖片時的替代文字&quot; &gt; </span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;figcaption&gt;圖片說明&lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;  </span><br><span class="line">&lt;img src=&quot;圖片位置&quot; alt=&quot;沒有圖片時的替代文字&quot; &gt; </span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;figcaption&gt;圖片說明&lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="超連結"><a href="#超連結" class="headerlink" title="超連結"></a>超連結</h4><p><code>&lt;a href=&quot;url&quot; target=&quot;_blank&quot;&gt;連結名稱&lt;/a&gt;</code></p>
 <p>ps.</p>
 <blockquote>
@@ -588,25 +162,25 @@
 <p>control 提供撥放控制鈕<br>preload=”none or auto or metadata” 頁面載入時是否載入視訊<br>control 提供撥放控制鈕<br>autoplay 自動播放<br>loop 結束後從頭播放  </p>
 </blockquote>
 <p>多重音訊 HTML5</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio&gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; &gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio&gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; &gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="播放視訊-HTML5-區塊標籤"><a href="#播放視訊-HTML5-區塊標籤" class="headerlink" title="播放視訊(HTML5) //區塊標籤"></a>播放視訊(HTML5) //區塊標籤</h4><p><code>&lt;video src=&quot;url&quot;&gt;&lt;/video&gt;</code><br><strong><em>ps.video 標籤的屬性不需要值，屬性存在選項就會開啟，如果不存在選項就關閉。</em></strong></p>
 <p>屬性：  </p>
 <blockquote>
 <p>src=”檔案路徑”<br>height=”200”<br>width=”100”<br>preload=”none or auto or metadata” 頁面載入時是否載入視訊<br>control 提供撥放控制鈕<br>autoplay 自動播放<br>loop 結束後從頭播放<br>poster=”圖片位置” 視訊下載時或播放前所顯示的影像  </p>
 </blockquote>
 <p>放數個視訊</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video&gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。"><a href="#表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。" class="headerlink" title="表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。"></a>表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;thead&gt;  &lt;!--表頭--&gt;</span><br><span class="line">    &lt;tr&gt;   &lt;!--列的起始  row - - -  column(行,欄)  | | |  --&gt;</span><br><span class="line">      &lt;th&gt;Month&lt;/th&gt;   &lt;!--表格標題--&gt;</span><br><span class="line">      &lt;th&gt;Savings&lt;/th&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/thead&gt;</span><br><span class="line">  &lt;tbody&gt;  &lt;!--內容--&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;January&lt;/td&gt;    &lt;!--表格內容--&gt;</span><br><span class="line">      &lt;td&gt;$100&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;February&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;$80&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/tbody&gt;</span><br><span class="line">  &lt;tfoot&gt;  &lt;!--註腳--&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;Sum&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;$180&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/tfoot&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line"></span><br><span class="line">&lt;td colspan=&quot;2&quot;&gt;$180&lt;/td&gt;  資料超過一欄 (跨欄)</span><br><span class="line">&lt;td rowspan=&quot;2&quot;&gt;$180&lt;/td&gt;  資料超過一列 (跨列)</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video&gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;source src=&quot;檔案路徑&quot; type=&quot;視訊格式&quot; code=&quot;編碼&quot; &gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></div>
+<h4 id="表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。"><a href="#表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。" class="headerlink" title="表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。"></a>表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。</h4><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;thead&gt;  &lt;!--表頭--&gt;</span><br><span class="line">    &lt;tr&gt;   &lt;!--列的起始  row - - -  column(行,欄)  | | |  --&gt;</span><br><span class="line">      &lt;th&gt;Month&lt;/th&gt;   &lt;!--表格標題--&gt;</span><br><span class="line">      &lt;th&gt;Savings&lt;/th&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/thead&gt;</span><br><span class="line">  &lt;tbody&gt;  &lt;!--內容--&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;January&lt;/td&gt;    &lt;!--表格內容--&gt;</span><br><span class="line">      &lt;td&gt;$100&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;February&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;$80&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/tbody&gt;</span><br><span class="line">  &lt;tfoot&gt;  &lt;!--註腳--&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;td&gt;Sum&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;$180&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/tfoot&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line"></span><br><span class="line">&lt;td colspan=&quot;2&quot;&gt;$180&lt;/td&gt;  資料超過一欄 (跨欄)</span><br><span class="line">&lt;td rowspan=&quot;2&quot;&gt;$180&lt;/td&gt;  資料超過一列 (跨列)</span><br></pre></td></tr></table></figure></div>
 <h4 id="表單"><a href="#表單" class="headerlink" title="表單"></a>表單</h4><p><code>&lt;form action=&quot;按下後接收送出資訊的url&quot; method=&quot;get or post&quot; id=&quot;a&quot;&gt;&lt;/from&gt;</code></p>
 <p><strong><em>get：搜尋框 or 只想從伺服器取得資料(普通資料)。<br>post：上傳檔案 or 表單很長 or 有敏感資料(密碼) or 資料加到資料庫或從資料庫刪除。</em></strong></p>
 <p><strong><em>name 跟 value 屬性欄位的值有些會傳給伺服器<br>任何文字輸入欄位可以使用 placeholder 屬性，placeholder=”顯示在欄位內的文字”</em></strong></p>
 <p>e.g.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;按下後接收送出資訊的url&quot; method=&quot;get or post&quot; id=&quot;a&quot;&gt;</span><br><span class="line"> &lt;p&gt;username 文字輸入</span><br><span class="line"> &lt;input type=&quot;text&quot; name=&quot;username&quot; maxlength=&quot;限制字元數&quot;&gt; </span><br><span class="line"> &lt;/p&gt;</span><br><span class="line">  &lt;!--多行文字輸入欄位標籤--&gt;</span><br><span class="line"> &lt;textarea name=&quot;Content&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">  &lt;!--密碼輸入--&gt;</span><br><span class="line"> &lt;input type=&quot;password&quot; name=&quot;username&quot; maxlength=&quot;限制字元數&quot;&gt;</span><br><span class="line">  &lt;!--單選--&gt;</span><br><span class="line"> &lt;input type=&quot;radio&quot; name=&quot;username&quot; value=&quot;傳到伺服器的值，每個單選鈕都不應相同&quot; checked=&quot;checked(預先選好)&quot;&gt;</span><br><span class="line">  &lt;!--勾選(可取消)--&gt;</span><br><span class="line"> &lt;input type=&quot;checkbox&quot; name=&quot;username&quot; value=&quot;傳到伺服器的值，每個單選鈕都不應相同&quot; checked=&quot;checked(預先選好)&quot;&gt;</span><br><span class="line"> &lt;!--下拉式選單 (若都沒 selected 屬性的話，會顯示第一個選項)--&gt;</span><br><span class="line"> &lt;select name=&quot;Location&quot; size=&quot;3&quot; multiple=&quot;multiple(可多選)&quot;&gt;</span><br><span class="line">   &lt;option value=&quot;Taipei&quot; selected=&quot;selected(預先選好)&quot;&gt;台北&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;Taoyuan&quot;&gt;桃園&lt;/option&gt;</span><br><span class="line"> &lt;/select&gt;</span><br><span class="line">   &lt;!--檔案輸入 (method 必須使用 post)--&gt;</span><br><span class="line">   &lt;input type=&quot;file&quot; name=&quot;username&quot;&gt;</span><br><span class="line">   &lt;!--送出按鈕 (name 跟 value 欄位可用可不用)--&gt;</span><br><span class="line">   &lt;input type=&quot;submit&quot; name=&quot;username&quot; value=&quot;顯示按鈕文字&quot;&gt;</span><br><span class="line">   影像按鈕</span><br><span class="line">   &lt;input type=&quot;image&quot; src=&quot;url&quot;&gt;</span><br><span class="line">&lt;/from&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;hidden&quot; name=&quot;&quot; value=&quot;&quot;&gt; 隱藏控制項，用隱藏欄位來記錄資訊</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;按下後接收送出資訊的url&quot; method=&quot;get or post&quot; id=&quot;a&quot;&gt;</span><br><span class="line"> &lt;p&gt;username 文字輸入</span><br><span class="line"> &lt;input type=&quot;text&quot; name=&quot;username&quot; maxlength=&quot;限制字元數&quot;&gt; </span><br><span class="line"> &lt;/p&gt;</span><br><span class="line">  &lt;!--多行文字輸入欄位標籤--&gt;</span><br><span class="line"> &lt;textarea name=&quot;Content&quot;&gt;&lt;/textarea&gt;</span><br><span class="line">  &lt;!--密碼輸入--&gt;</span><br><span class="line"> &lt;input type=&quot;password&quot; name=&quot;username&quot; maxlength=&quot;限制字元數&quot;&gt;</span><br><span class="line">  &lt;!--單選--&gt;</span><br><span class="line"> &lt;input type=&quot;radio&quot; name=&quot;username&quot; value=&quot;傳到伺服器的值，每個單選鈕都不應相同&quot; checked=&quot;checked(預先選好)&quot;&gt;</span><br><span class="line">  &lt;!--勾選(可取消)--&gt;</span><br><span class="line"> &lt;input type=&quot;checkbox&quot; name=&quot;username&quot; value=&quot;傳到伺服器的值，每個單選鈕都不應相同&quot; checked=&quot;checked(預先選好)&quot;&gt;</span><br><span class="line"> &lt;!--下拉式選單 (若都沒 selected 屬性的話，會顯示第一個選項)--&gt;</span><br><span class="line"> &lt;select name=&quot;Location&quot; size=&quot;3&quot; multiple=&quot;multiple(可多選)&quot;&gt;</span><br><span class="line">   &lt;option value=&quot;Taipei&quot; selected=&quot;selected(預先選好)&quot;&gt;台北&lt;/option&gt;</span><br><span class="line">   &lt;option value=&quot;Taoyuan&quot;&gt;桃園&lt;/option&gt;</span><br><span class="line"> &lt;/select&gt;</span><br><span class="line">   &lt;!--檔案輸入 (method 必須使用 post)--&gt;</span><br><span class="line">   &lt;input type=&quot;file&quot; name=&quot;username&quot;&gt;</span><br><span class="line">   &lt;!--送出按鈕 (name 跟 value 欄位可用可不用)--&gt;</span><br><span class="line">   &lt;input type=&quot;submit&quot; name=&quot;username&quot; value=&quot;顯示按鈕文字&quot;&gt;</span><br><span class="line">   影像按鈕</span><br><span class="line">   &lt;input type=&quot;image&quot; src=&quot;url&quot;&gt;</span><br><span class="line">&lt;/from&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;hidden&quot; name=&quot;&quot; value=&quot;&quot;&gt; 隱藏控制項，用隱藏欄位來記錄資訊</span><br></pre></td></tr></table></figure></div>
 <p>ps.表單驗證<br>HTML5 有驗證功能，加入 required 屬性(不需要值)，由瀏覽器來做。)，HTML5 才有(不支援 HTML5 的瀏覽器會當作文字框)。  </p>
 <p>日期輸入<br><code>&lt;input type=&quot;date&quot; name=&quot;date&quot;&gt;</code><br>EMAIL 輸入<br><code>&lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;</code><br>URL 輸入<br><code>&lt;input type=&quot;url&quot; name=&quot;website&quot;&gt;</code><br>搜尋輸入<br><code>&lt;input type=&quot;search&quot; name=&quot;search&quot;&gt;</code></p>
 <h4 id="label-協助使用者在點選到該標籤時，可以透過-for-的屬性值，去連動具有相同-id-屬性值的標籤。或是直接將-lt-input-gt-元素包圍起來。"><a href="#label-協助使用者在點選到該標籤時，可以透過-for-的屬性值，去連動具有相同-id-屬性值的標籤。或是直接將-lt-input-gt-元素包圍起來。" class="headerlink" title="label 協助使用者在點選到該標籤時，可以透過 for 的屬性值，去連動具有相同 id 屬性值的標籤。或是直接將 &lt;input&gt; 元素包圍起來。"></a>label 協助使用者在點選到該標籤時，可以透過 for 的屬性值，去連動具有相同 id 屬性值的標籤。或是直接將 <code>&lt;input&gt;</code> 元素包圍起來。</h4><p><code>&lt;label for=&quot;某id值&quot;&gt;&lt;/label&gt;</code>  </p>
 <p>e.g.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;booktype&quot; value=&quot;1&quot; id=&quot;booktype1&quot; checked &gt;&lt;/label&gt;</span><br><span class="line">&lt;input type=&quot;radio&quot; name=&quot;booktype&quot; value=&quot;2&quot; id=&quot;booktype2&quot; checked &gt;</span><br><span class="line">&lt;label for=&quot;booktype1&quot;&gt;html 書&lt;/label&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;booktype&quot; value=&quot;1&quot; id=&quot;booktype1&quot; checked &gt;&lt;/label&gt;</span><br><span class="line">&lt;input type=&quot;radio&quot; name=&quot;booktype&quot; value=&quot;2&quot; id=&quot;booktype2&quot; checked &gt;</span><br><span class="line">&lt;label for=&quot;booktype1&quot;&gt;html 書&lt;/label&gt;</span><br></pre></td></tr></table></figure></div>
 <h4 id="按鈕-可添加圖片"><a href="#按鈕-可添加圖片" class="headerlink" title="按鈕(可添加圖片)"></a>按鈕(可添加圖片)</h4><p><code>&lt;button type=&quot;button&quot;&gt;&lt;img src=&quot;url&quot; alt=&quot;&quot;&gt;&lt;/button&gt;</code> </p>
 <h4 id="iframe-顯示別的-url-的網頁內容在本身網頁的某區塊上"><a href="#iframe-顯示別的-url-的網頁內容在本身網頁的某區塊上" class="headerlink" title="iframe 顯示別的 url 的網頁內容在本身網頁的某區塊上"></a>iframe 顯示別的 url 的網頁內容在本身網頁的某區塊上</h4><p><code>&lt;iframe src=&quot;url&quot; height=&quot;20&quot; width=&quot;10&quot;&gt;&lt;/iframe&gt;</code></p>
 <h4 id="註解"><a href="#註解" class="headerlink" title="註解"></a>註解</h4><p><code>&lt;!----&gt;</code></p>
@@ -615,7 +189,7 @@
 <ul>
 <li>若檔案為 *.HTML 的話，在開啟檔案後，打 <code>!</code> ，可產生出以下標籤。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></div>
 <ul>
 <li><p>打 lorem300，可以產生 300個假字。</p>
 </li>
@@ -625,860 +199,7 @@
 <p>e.g.</p>
 <p><code>div.test*2&gt;p+img</code></p>
 <p>產生</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="簡單網頁範例："><a href="#簡單網頁範例：" class="headerlink" title="簡單網頁範例："></a>簡單網頁範例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">     &lt;!-- meta 網頁資訊給瀏覽器讀取 --&gt;</span><br><span class="line">     &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">     &lt;meta name=&quot;viewport&quot;&gt;</span><br><span class="line">     &lt;meta http-equiv=&quot;X-UA-compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">     &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">     &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</span><br><span class="line">     &lt;!-- CSS --&gt;</span><br><span class="line">     &lt;style&gt;</span><br><span class="line">       h1&#123;color:red&#125;</span><br><span class="line">     &lt;/style&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">     &lt;!-- 錨點寫法 --&gt;</span><br><span class="line">     &lt;!-- emmet寫法 ul&gt;li*3&gt;a&#123;標題&#125; enter後會產生以下標籤</span><br><span class="line">     &lt;ul&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">     &lt;/ul&gt; --&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title1&quot;&gt;標題1&lt;/a&gt;&lt;/li&gt; </span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title2&quot;&gt;標題2&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title3&quot;&gt;標題3&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;!-- 標題4錨點定位在page.html的 id=title3 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;page.html#title3&quot;&gt;標題4&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt; </span><br><span class="line">    &lt;!-- 標題1 id_name=title1 --&gt;</span><br><span class="line">    &lt;h1 id=&quot;title1&quot;&gt;標題一&lt;/h1&gt;</span><br><span class="line">    &lt;!-- vscode 內打 lorem 會產生一段假文 --&gt;</span><br><span class="line">    &lt;p&gt;lorem&lt;/p&gt;</span><br><span class="line">    &lt;!-- 從上到下讀取到此的網頁程式碼後執行js資料夾的all.js 然後再接著執行下面的程式碼--&gt;</span><br><span class="line">    &lt;script src=&quot;js/all.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;h1&gt;js後的標題&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;123&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;    </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
+<h3 id="簡單網頁範例："><a href="#簡單網頁範例：" class="headerlink" title="簡單網頁範例："></a>簡單網頁範例：</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">     &lt;!-- meta 網頁資訊給瀏覽器讀取 --&gt;</span><br><span class="line">     &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">     &lt;meta name=&quot;viewport&quot;&gt;</span><br><span class="line">     &lt;meta http-equiv=&quot;X-UA-compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">     &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">     &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</span><br><span class="line">     &lt;!-- CSS --&gt;</span><br><span class="line">     &lt;style&gt;</span><br><span class="line">       h1&#123;color:red&#125;</span><br><span class="line">     &lt;/style&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">     &lt;!-- 錨點寫法 --&gt;</span><br><span class="line">     &lt;!-- emmet寫法 ul&gt;li*3&gt;a&#123;標題&#125; enter後會產生以下標籤</span><br><span class="line">     &lt;ul&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;a href=&quot;&quot;&gt;標題&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">     &lt;/ul&gt; --&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title1&quot;&gt;標題1&lt;/a&gt;&lt;/li&gt; </span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title2&quot;&gt;標題2&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;#title3&quot;&gt;標題3&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;!-- 標題4錨點定位在page.html的 id=title3 --&gt;</span><br><span class="line">        &lt;li&gt;&lt;a href=&quot;page.html#title3&quot;&gt;標題4&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt; </span><br><span class="line">    &lt;!-- 標題1 id_name=title1 --&gt;</span><br><span class="line">    &lt;h1 id=&quot;title1&quot;&gt;標題一&lt;/h1&gt;</span><br><span class="line">    &lt;!-- vscode 內打 lorem 會產生一段假文 --&gt;</span><br><span class="line">    &lt;p&gt;lorem&lt;/p&gt;</span><br><span class="line">    &lt;!-- 從上到下讀取到此的網頁程式碼後執行js資料夾的all.js 然後再接著執行下面的程式碼--&gt;</span><br><span class="line">    &lt;script src=&quot;js/all.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;h1&gt;js後的標題&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;123&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;    </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></div>
 <p>參考：<br><a href="https://zh.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/HTML</a><br><a href="http://cychiang719.blogspot.com/2008/08/html.html" target="_blank" rel="noopener">http://cychiang719.blogspot.com/2008/08/html.html</a><br><a href="http://n.sfs.tw/content/index/10323" target="_blank" rel="noopener">http://n.sfs.tw/content/index/10323</a><br><a href="https://ithelp.ithome.com.tw/articles/10160131" target="_blank" rel="noopener">https://ithelp.ithome.com.tw/articles/10160131</a><br><a href="http://www.dlps.tc.edu.tw/html_teach/" target="_blank" rel="noopener">http://www.dlps.tc.edu.tw/html_teach/</a></p>
-
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/HTML/" rel="tag"># HTML</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/12/15/AJAX-base/" rel="next" title="記錄一下 AJAX 操作的幾個方法">
-                <i class="fa fa-chevron-left"></i> 記錄一下 AJAX 操作的幾個方法
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/16/Sass-base/" rel="prev" title="Sass 基本介紹">
-                Sass 基本介紹 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概要
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">jerry wu</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">15</span>
-                    <span class="site-state-item-name">文章</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">分類</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">14</span>
-                    <span class="site-state-item-name">標籤</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/jw310" title="GitHub &rarr; https://github.com/jw310" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://twitter.com/yourname" title="Twitter &rarr; https://twitter.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://instagram.com/yourname" title="Instagram &rarr; https://instagram.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
-
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-基本介紹"><span class="nav-number">1.</span> <span class="nav-text">HTML 基本介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#超文本標記語言（英語：HyperText-Markup-Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面-3-。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了-5-0-版。"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">超文本標記語言（英語：HyperText Markup Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML是一種基礎技術，常與CSS、JavaScript一起被眾多網站用於設計網頁、網頁應用程式以及行動應用程式的使用者介面[3]。網頁瀏覽器可以讀取HTML檔案，並將其彩現成視覺化網頁。HTML描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。目前已經到了 5.0 版。</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#標籤元素"><span class="nav-number">2.</span> <span class="nav-text">標籤元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#標籤種類"><span class="nav-number">3.</span> <span class="nav-text">標籤種類</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#網頁頁面資訊"><span class="nav-number">3.1.</span> <span class="nav-text">網頁頁面資訊</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#版本宣告-HTML5"><span class="nav-number">3.1.1.</span> <span class="nav-text">版本宣告(HTML5)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#網頁語系"><span class="nav-number">3.1.2.</span> <span class="nav-text">網頁語系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#網頁資訊"><span class="nav-number">3.1.3.</span> <span class="nav-text">網頁資訊</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#瀏覽器頂端或該頁面標題列"><span class="nav-number">3.1.4.</span> <span class="nav-text">瀏覽器頂端或該頁面標題列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#連結外部資源"><span class="nav-number">3.1.5.</span> <span class="nav-text">連結外部資源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#script-外部引用"><span class="nav-number">3.1.6.</span> <span class="nav-text">script 外部引用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#網頁內容標籤"><span class="nav-number">3.2.</span> <span class="nav-text">網頁內容標籤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#body-標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用-CSS-處理。"><span class="nav-number">3.2.1.</span> <span class="nav-text">body 標籤包含的元素會顯示在瀏覽器視窗，標籤組成有分成語意及無語意，來描述頁面資料及結構，視覺效果用 CSS 處理。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#div-區塊標籤，可當做無語意的-lt-header-gt-、-lt-article-gt-，無明顯含義的區塊或為了排版目的"><span class="nav-number">3.2.2.</span> <span class="nav-text">div 區塊標籤，可當做無語意的 &lt;header&gt;、&lt;article&gt;，無明顯含義的區塊或為了排版目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#span-行內標籤，可當做無語意的-lt-strong-gt-、-lt-em-gt-。將文字與元素群組組在行內中。"><span class="nav-number">3.2.3.</span> <span class="nav-text">span 行內標籤，可當做無語意的 &lt;strong&gt;、&lt;em&gt;。將文字與元素群組組在行內中。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#樣式標籤，使用-css-樣式-內部宣告用-。"><span class="nav-number">3.2.4.</span> <span class="nav-text">樣式標籤，使用 css 樣式(內部宣告用)。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#語意標籤"><span class="nav-number">3.3.</span> <span class="nav-text">語意標籤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5-語意標籤-大多是區塊標籤"><span class="nav-number">3.3.1.</span> <span class="nav-text">HTML5 語意標籤(大多是區塊標籤)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空白："><span class="nav-number">3.3.2.</span> <span class="nav-text">空白：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#標題-區塊標籤"><span class="nav-number">3.3.3.</span> <span class="nav-text">標題  //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#段落-區塊標籤"><span class="nav-number">3.3.4.</span> <span class="nav-text">段落  //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#粗體"><span class="nav-number">3.3.5.</span> <span class="nav-text">粗體</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#斜體"><span class="nav-number">3.3.6.</span> <span class="nav-text">斜體</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上標"><span class="nav-number">3.3.7.</span> <span class="nav-text">上標</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下標"><span class="nav-number">3.3.8.</span> <span class="nav-text">下標</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#斷行"><span class="nav-number">3.3.9.</span> <span class="nav-text">斷行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#水平線-區塊標籤"><span class="nav-number">3.3.10.</span> <span class="nav-text">水平線  //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加強，通常標記為重要"><span class="nav-number">3.3.11.</span> <span class="nav-text">加強，通常標記為重要</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#斜體，強調元素內容"><span class="nav-number">3.3.12.</span> <span class="nav-text">斜體，強調元素內容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#編號清單-區塊標籤"><span class="nav-number">3.3.13.</span> <span class="nav-text">編號清單  //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#項目清單-區塊標籤"><span class="nav-number">3.3.14.</span> <span class="nav-text">項目清單  //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定義清單-區塊標籤"><span class="nav-number">3.3.15.</span> <span class="nav-text">定義清單   //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#巢狀清單"><span class="nav-number">3.3.16.</span> <span class="nav-text">巢狀清單</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#將內容縮排，通常作為引述-區塊標籤"><span class="nav-number">3.3.17.</span> <span class="nav-text">將內容縮排，通常作為引述   區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引號"><span class="nav-number">3.3.18.</span> <span class="nav-text">引號</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#縮寫及縮略字"><span class="nav-number">3.3.19.</span> <span class="nav-text">縮寫及縮略字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#email-or-地址-區塊標籤"><span class="nav-number">3.3.20.</span> <span class="nav-text">email or 地址    //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入字，會加上底線"><span class="nav-number">3.3.21.</span> <span class="nav-text">插入字，會加上底線</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#刪節線，元素內容會加上刪節線"><span class="nav-number">3.3.22.</span> <span class="nav-text">刪節線，元素內容會加上刪節線</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元素內容加上刪節線，標示不正確但不刪除的內容"><span class="nav-number">3.3.23.</span> <span class="nav-text">元素內容加上刪節線，標示不正確但不刪除的內容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#畫-canvas-區塊標籤"><span class="nav-number">3.3.24.</span> <span class="nav-text">畫 canvas     //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#置中，標籤內元素會置中"><span class="nav-number">3.3.25.</span> <span class="nav-text">置中，標籤內元素會置中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顯示標籤內資料的原始格式"><span class="nav-number">3.3.26.</span> <span class="nav-text">顯示標籤內資料的原始格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#旁註標記"><span class="nav-number">3.3.27.</span> <span class="nav-text">旁註標記</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入圖片"><span class="nav-number">3.3.28.</span> <span class="nav-text">插入圖片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#超連結"><span class="nav-number">3.3.29.</span> <span class="nav-text">超連結</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#音訊"><span class="nav-number">3.3.30.</span> <span class="nav-text">音訊</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放視訊-HTML5-區塊標籤"><span class="nav-number">3.3.31.</span> <span class="nav-text">播放視訊(HTML5) //區塊標籤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表格：不要用來排版，只要顯示資料就好。用-CSS-處理排版。"><span class="nav-number">3.3.32.</span> <span class="nav-text">表格：不要用來排版，只要顯示資料就好。用 CSS 處理排版。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表單"><span class="nav-number">3.3.33.</span> <span class="nav-text">表單</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#label-協助使用者在點選到該標籤時，可以透過-for-的屬性值，去連動具有相同-id-屬性值的標籤。或是直接將-lt-input-gt-元素包圍起來。"><span class="nav-number">3.3.34.</span> <span class="nav-text">label 協助使用者在點選到該標籤時，可以透過 for 的屬性值，去連動具有相同 id 屬性值的標籤。或是直接將 &lt;input&gt; 元素包圍起來。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按鈕-可添加圖片"><span class="nav-number">3.3.35.</span> <span class="nav-text">按鈕(可添加圖片)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iframe-顯示別的-url-的網頁內容在本身網頁的某區塊上"><span class="nav-number">3.3.36.</span> <span class="nav-text">iframe 顯示別的 url 的網頁內容在本身網頁的某區塊上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#註解"><span class="nav-number">3.3.37.</span> <span class="nav-text">註解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#符號顯示"><span class="nav-number">3.3.38.</span> <span class="nav-text">符號顯示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#補充"><span class="nav-number">3.3.39.</span> <span class="nav-text">補充</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#簡單網頁範例："><span class="nav-number">3.4.</span> <span class="nav-text">簡單網頁範例：</span></a></li></ol></li></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">jerry wu</span>
-
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-    <span title="總字數">45k</span>
-  
-
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    
-    <span title="所需總閱讀時間">1:15</span>
-  
-</div>
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-    
-
-    
-
-    
-
-    
-  </div>
-
-  
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
-
-  
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
-
-
-
-  
-
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-  
-<script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://jwblog.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
-
-
-
-
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.json";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-<script>
-  $('.highlight').not('.gist .highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('複製').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      const selection = document.getSelection();
-      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-      if (selected) {
-        selection.removeAllRanges();
-        selection.addRange(selected);
-      }
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('複製');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
-
-  
-
-  
-
-</body>
-</html>
+</div></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HTML/">HTML    </a></div><div class="post_share"></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/01/16/Sass-base/"><img class="prev_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Sass 基本介紹</span></div></a></div><div class="next-post pull_right"><a href="/2019/12/15/AJAX-base/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>記錄一下 AJAX 操作的幾個方法</span></div></a></div></nav></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By jerry wu</div><div class="framework-info"><span>Power by </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="閲讀模式"></i><i class="fa fa-plus" id="font_plus" title="放大字體"></i><i class="fa fa-minus" id="font_minus" title="縮小字體"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜間模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="設置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="目錄" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到頂部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async></script></body></html>
