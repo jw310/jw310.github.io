@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>NPM 介紹</title>
+      <link href="/2020/02/03/NPM/"/>
+      <url>/2020/02/03/NPM/</url>
+      
+        <content type="html"><![CDATA[<h1 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h1><p>npm（全稱 Node Package Manager，即「node包管理器」）是Node.js 預設的、以 JavaScript 編寫的軟體套件管理系統。</p><h2 id="專案使用-npm"><a href="#專案使用-npm" class="headerlink" title="專案使用 npm"></a>專案使用 npm</h2><p>到專案資料夾下，輸入以下指令</p><p><code>$npm init</code></p><p>會新增 package.json 檔案紀錄套件安裝情況。</p><p>安裝套件</p><p><code>$sudo npm install express —save</code></p><p>ps. mac 有時要加 sudo  </p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>npm -v ：觀看 NPM 版本</p><p>npm init ：新增 package.json</p><p>npm install [模組名稱][參數]：安裝 NPM 模組，會根據 package.json 去下載安裝套件，放在 node_modules 資料夾。</p><p>安裝位置常用屬性如下：</p><p>-g  全域安裝，安裝資料夾位置  /usr/local/lib/node_modules</p><p>–save  安裝模組及紀錄在 package.json 的 “dependencies” 中，並產生 node_modules 資料夾。  </p><p>–save-dev  安裝模組並寫入 package.json 的<br>“devDependencies”  </p><p>npm list ：顯示安裝的 NPM 列表  </p><p>npm uninstall [模組名稱]：刪除專案裡的 NPM  </p><p>版本號編碼</p><p>1.12.0     -1 主要版本號   -12 次要版本號  -0 bug 修正</p><h2 id="推薦套件"><a href="#推薦套件" class="headerlink" title="推薦套件"></a>推薦套件</h2><p>nodemon 套件：它會監視你的程式碼有無的任何更改並自動重新啟動服務，這時只要刷新你的瀏覽器就能看到改動，此外 nodemon 使用 npm 進行安裝，只需使用 nodemon 取代 node 執行你的程式碼，就能輕鬆的開發 node.js。</p><p><code>npm install nodemon -g</code></p><p>安裝於專案資料夾中  </p><p><code>npm install --save-dev nodemon</code></p><p>// 執行，網頁重新整理就會立即看出結果  </p><p><code>nodemon index.js</code></p><h2 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h2><p>clone 別人的專案後，發現 package.json 有dependencies  NPM 列表，但沒有 node_modules 資料夾時，該下什麼指令來安裝該專案的 NPM 列表？</p><p><code>npm install</code></p><p>參考：<br><a href="https://medium.com/az-下筆記/webpack-前端打包工具-1-前置-c9380f688c1b" target="_blank" rel="noopener">https://medium.com/az-下筆記/webpack-前端打包工具-1-前置-c9380f688c1b</a><br><a href="https://tw.alphacamp.co/blog/npm-node-package-manager" target="_blank" rel="noopener">https://tw.alphacamp.co/blog/npm-node-package-manager</a><br><a href="https://medium.com/@hugh_Program_learning_diary_Js/javascript-進階-npm-abf96671c915" target="_blank" rel="noopener">https://medium.com/@hugh_Program_learning_diary_Js/javascript-進階-npm-abf96671c915</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Nodejs 間單介紹</title>
       <link href="/2020/01/21/nodejs-base/"/>
       <url>/2020/01/21/nodejs-base/</url>
