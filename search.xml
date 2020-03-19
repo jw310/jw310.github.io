@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>base64 轉檔加快圖片載入</title>
+      <link href="/2020/03/19/base64image/"/>
+      <url>/2020/03/19/base64image/</url>
+      
+        <content type="html"><![CDATA[<h1 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h1><p>可將圖片轉成字串形式再引用，以加快網頁載入速度。適合容量較小的圖檔。</p><p>轉檔網站：</p><p><a href="https://www.base64-image.de" target="_blank" rel="noopener">https://www.base64-image.de</a></p><p>將圖片拖曳網頁上或是選取圖片檔案，轉檔後。按下 show code 按鈕，會顯示引用方式。即可引用。</p><p>參考：<br><a href="https://cythilya.github.io/2018/07/26/base64-images/" target="_blank" rel="noopener">https://cythilya.github.io/2018/07/26/base64-images/</a><br><a href="https://sofree.cc/base64-images/" target="_blank" rel="noopener">https://sofree.cc/base64-images/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> image </tag>
+            
+            <tag> efficacy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>簡單介紹 maskmap 查詢網站</title>
       <link href="/2020/02/21/maskmap/"/>
       <url>/2020/02/21/maskmap/</url>
