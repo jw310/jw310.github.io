@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jw310.github.io/2020/07/17/Javascript-Execution-context/</loc>
+    
+    <lastmod>2020-07-19T00:54:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jw310.github.io/2020/07/17/Javascript-concept/</loc>
     
-    <lastmod>2020-07-17T09:08:35.000Z</lastmod>
+    <lastmod>2020-07-19T00:41:11.000Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://jw310.github.io/2020/07/17/Javascript-scope/</loc>
     
     <lastmod>2020-07-17T08:21:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jw310.github.io/2020/07/17/Javascript-Execution-context/</loc>
-    
-    <lastmod>2020-07-17T06:34:37.000Z</lastmod>
     
   </url>
   
